@@ -27,7 +27,6 @@ p{
     font-size: 120%;
 }
 
-
 #about-move{
     position: fixed;
     top: 70%;
@@ -102,11 +101,11 @@ p{
 }
 
 #grid-container{
-    margin: 5%;
+    margin: 30% 5%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    row-gap: 30px;
+    row-gap: 80px;
 }
 
 .item-1{
@@ -121,10 +120,11 @@ p{
 .item-3{
     grid-column-start:  4;
     grid-column-end: span 2;
+    margin: 50px 0px;
 }
 .item-4{
     grid-column-start:  1;
-    margin-left: 200px;
+    margin-left: 300px;
 }
 .item-5{
     grid-column-start:  1;
@@ -145,4 +145,22 @@ p{
     place-self: end;
     margin-top: 100px;
     margin-right: -75px;
+}
+.item-7{
+    grid-column-start:  1;
+    grid-column-end: span 2;
+    margin-left: 100px;
+    margin-top: -100px;
+}
+.item-8{
+    grid-column-start:  1;
+    grid-column-end: span 2;
+    margin-left: 100px;
+    margin-top: -100px;
+}
+.item-9{
+    grid-column-start:  1;
+    grid-column-end: span 2;
+    margin-left: 100px;
+    margin-top: -100px;
 }
