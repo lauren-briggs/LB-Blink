@@ -1,0 +1,76 @@
+body{
+    width: 100%;
+    margin: 0% auto;
+}
+
+@font-face {
+    font-family: "SuisseIntlMono-Reg";
+    src: url(assets/type/SuisseIntlMono-Regular-WebS.woff); 
+  }
+
+  @font-face {
+    font-family: "SuisseIntlMono-Bold";
+    src: url(assets/type/SuisseIntlMono-Bold-WebS.woff); 
+  }
+
+  @font-face {
+    font-family: "Necto-Mono";
+    src: url(assets/type/Necto-Mono.woff2); 
+  }
+
+
+p{
+    /* font-family: "SuisseIntlMono-Reg"; */
+    font-family: covik-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+}
+
+
+#about-move{
+    position: fixed;
+    top: 70%;
+    width: 100%;
+    z-index: -2;
+    /* Starting position */  
+    -moz-transform:translateX(50%);
+    -webkit-transform:translateX(50%);    
+    transform:translateX(100%);
+    /* Apply animation to this element */  
+    -moz-animation: example1 25s linear infinite;
+    -webkit-animation: example1 25s linear infinite;
+    animation: example1 25s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+    0%   { -moz-transform: translateX(100%); 
+                transform: translate(100%)}
+    100% { -moz-transform: translateX(-100%); 
+                transform: translate(100%)}
+}
+@-webkit-keyframes example1 {
+    0%   { -webkit-transform: translateX(100%); 
+                    transform: translate(100%)}
+    100% { -webkit-transform: translateX(-100%); 
+                    transform: translate(100%)}
+}
+@keyframes example1 {
+    0%   { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%);       
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+}
+
+
+#CV-icon{
+    position:fixed;
+    left:40px;
+    bottom: 40px;
+}
