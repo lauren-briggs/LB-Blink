@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/emx4evi.css">
 
+    <!-- JAVASCRIPT LINKS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
+    <!-- MAIN JS -->
+    <script src="main.js" charset="utf-8"></script>
+    <!-- ION ICON -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <title>LBD</title>
     <link rel="shortcut icon" type="image/jpg" href="assets/img/LBD-Favicon.svg" />
 
@@ -17,12 +25,30 @@
 
 <body>
     <header>
-        <img src="assets/img/LBD-Gif-1A-02.gif" alt="LBD-Gif" width="200px">
+        <div id="header-container">
+            <img id="logo" src="assets/img/LBD-Gif-1A-02.gif" alt="LBD-Gif" height="59px">
+            <div id="pause-container">
+                <div id="pause">
+                </div>
+            </div>
+            <div id="about-move">
+                <p>Graphic ~ Web ~ Editorial ~ Typography ~ Print ~ Digital</p>
+            </div>
+        </div>
     </header>
 
     <main>
-        <div id="about-move">
-            <p>A Melbourne-based Graphic Designer</p>
+
+        <div id="circle-container">
+            <div class="circle-text">A Melbourne-based Graphic Designer</div>
+        </div>
+
+        <div id="nav">
+            <ul>
+                <li><a href="#top">Top</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
 
         <div id="scroll">
@@ -30,45 +56,50 @@
         </div>
 
         <div id="CV-icon">
-            <img src="assets/img/LBD-CV-Icon-Small.png" alt="CV PDF Icon" width="75px">
+            <img src="assets/img/LBD-CV-Icon-Small.png" alt="CV PDF Icon" width="75px" loading="lazy">
             <p id="cv-label">cv.pdf</p>
         </div>
 
         <section id="grid-container">
             <div class="item item-1">
-                <img id="absent" src="assets/img/work/LBD-Absented-Minded.jpg" alt="Absent Minded Graphic"
-                    width="400px">
+                <img id="absent" src="assets/img/work/LBD-Absented-Minded.jpg" alt="Absent Minded Graphic" width="400px"
+                    loading="lazy">
             </div>
             <div class="item item-2">
-                <img src="assets/img/work/LBD-hyphen-press-01.png" alt="Hyphen Press Catalogue" width="300px">
+                <img src="assets/img/work/LBD-hyphen-press-01.png" alt="Hyphen Press Catalogue" width="300px"
+                    loading="lazy">
             </div>
             <div class="item item-3">
-                <img src="assets/img/work/LBD-GFGF-01.png" alt="GFGF Graphic" width="300px">
+                <img src="assets/img/work/LBD-GFGF-01.png" alt="GFGF Graphic" width="300px" loading="lazy">
             </div>
             <div class="item item-4">
-                <img src="assets/img/work/LBD-2022-04.jpg" alt="2022 Graphic" width="300px">
+                <img src="assets/img/work/LBD-2022-04.jpg" alt="2022 Graphic" width="300px" loading="lazy">
             </div>
             <div class="item item-5">
                 <div id="glitch">
                     <p id="FML">"FML" <br> &nbsp;&nbsp;&nbsp; &#8212; a series</p>
-                    <img src="assets/img/work/LBD-glitch-01.jpg" alt="Glitch" width="200px">
-                    <img src="assets/img/work/LBD-glitch-02.jpg" alt="Glitch" width="200px">
-                    <img src="assets/img/work/LBD-glitch-03.jpg" alt="Glitch" width="200px">
-                    <img src="assets/img/work/LBD-glitch-04.jpg" alt="Glitch" width="200px">
-                    <img src="assets/img/work/LBD-glitch-05.jpg" alt="Glitch" width="200px">
+                    <img src="assets/img/work/LBD-glitch-01.jpg" alt="Glitch" width="200px" loading="lazy">
+                    <img src="assets/img/work/LBD-glitch-02.jpg" alt="Glitch" width="200px" loading="lazy">
+                    <img src="assets/img/work/LBD-glitch-03.jpg" alt="Glitch" width="200px" loading="lazy">
+                    <img src="assets/img/work/LBD-glitch-04.jpg" alt="Glitch" width="200px" loading="lazy">
+                    <img src="assets/img/work/LBD-glitch-05.jpg" alt="Glitch" width="200px" loading="lazy">
                 </div>
             </div>
             <div class="item item-6">
-                <img src="assets/img/work/LBD-lampedusa-01.png" alt="Lampedusa Turtle Icon" width="150px">
+                <img src="assets/img/work/LBD-lampedusa-01.png" alt="Lampedusa Turtle Icon" width="150px"
+                    loading="lazy">
             </div>
             <div class="item item-7">
-                <img src="assets/img/work/LBD-l'artedellaceramiche-01.png" alt="L'Arte Della Ceramiche" width="700px">
+                <img src="assets/img/work/LBD-l'artedellaceramiche-01.png" alt="L'Arte Della Ceramiche" width="700px"
+                    loading="lazy">
             </div>
             <div class="item item-8">
-                <img src="assets/img/work/LBD-l'artedellaceramiche-02.png" alt="L'Arte Della Ceramiche" width="700px">
+                <img src="assets/img/work/LBD-l'artedellaceramiche-02.png" alt="L'Arte Della Ceramiche" width="700px"
+                    loading="lazy">
             </div>
             <div class="item item-9">
-                <img src="assets/img/work/LBD-l'artedellaceramiche-03.png" alt="L'Arte Della Ceramiche" width="700px">
+                <img src="assets/img/work/LBD-l'artedellaceramiche-03.png" alt="L'Arte Della Ceramiche" width="700px"
+                    loading="lazy">
             </div>
 
         </section>
