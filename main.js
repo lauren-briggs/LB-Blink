@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    // transform text into circle
     var circleText = $(".circle-text");
     var text = circleText.text();
     var letterArr = [];
@@ -17,7 +18,7 @@ $(document).ready(function () {
         });
         circleText.html(letterArr);
 
-        console.log(letterArr)
+        // console.log(letterArr)
 
         var letters = circleText.find("span");
         letters.css({
@@ -45,6 +46,48 @@ $(document).ready(function () {
             transform: `rotate(${window.pageYOffset / 2}deg)`,
             transformOrigin: `center center`,
         });
+    });
+
+    // disappear 'scroll' text on scroll
+    const scrollText = $('#scroll')
+    $(window).scroll(function () {
+        if ($(window).scrollTop() == 0) {
+            scrollText.css({
+                opacity: '1',
+                transition: '0.5s ease',
+            })
+        } else {
+            scrollText.css({
+                opacity: '0',
+                transition: '0.5s ease',
+            })
+        }
+    })
+
+    // pause button functionality
+    var pauseBtn = $('#pause-container')
+    var pauseIcon = $('#pause')
+    var aboutMove = $('#about-move');
+    var logo = $('#logo');
+
+    pauseBtn.click(function () {
+        if (this.value == 'pause') {
+            aboutMove.css({
+                animationPlayState: 'paused',
+            });
+            logo.attr('src', 'assets/img/LBD-10.jpg');
+            this.value = 'play';
+            pauseIcon.addClass('showme');
+            console.log(`button value is now: ${this.value}`)
+        } else {
+            aboutMove.css({
+                animationPlayState: '',
+            });
+            logo.attr('src', 'assets/img/LBD-Gif-1A-02.gif');
+            pauseIcon.removeClass('showme');
+            this.value = 'pause';
+            console.log(`button value is now: ${this.value}`)
+        }
     });
 
 
