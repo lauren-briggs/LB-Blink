@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/emx4evi.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- JAVASCRIPT LINKS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
@@ -25,18 +25,25 @@
 
 <body>
     <header id="#top">
-        <div id="header-container">
-            <img id="logo" src="assets/img/LBD-Gif-1A-02.gif" alt="LBD-Gif" height="59px">
-            <button id="pause-container" value="pause">
-                <div id="pause">
+        <section id="header-container">
+            <div class="nav-cont">
+                <img class="nav-item" id="logo" src="assets/img/LBD-Gif-1A-02.gif" alt="LBD-Gif" height="59px">
+                <button class="nav-item" id="pause-container" value="pause">
+                    <div id="pause">
+                    </div>
+                </button>
+            </div>
+            <div class="nav-cont">
+                <div class="nav-item" id="home-menu">
+                    <a href="/index.html">Home</a>
                 </div>
-            </button>
-            <div id="website-menu">
-                <a href="/sites.html">Websites</a>
+                <div class="nav-item" id="website-menu">
+                    <a href="/sites.html">Websites</a>
+                </div>
             </div>
-            <div id="about-move">
-                <p>Graphic ~ Web ~ Editorial ~ Typography ~ Print ~ Digital</p>
-            </div>
+        </section>
+        <div id="about-move">
+            <p>Graphic ~ Web ~ Editorial ~ Typography ~ Print ~ Digital</p>
         </div>
     </header>
 
@@ -65,8 +72,8 @@
             <p>Scroll to get started...</p>
         </div>
 
-        <div id="CV-icon">
-            <a href="/assets/img/CV.pdf" target="blank" alt="CV">
+        <div id="CV-cont">
+            <a href="/assets/img/LBD-CV.pdf" id="CV-icon" target="blank" alt="CV">
                 <img src="assets/img/LBD-CV-Icon-Small.png" alt="CV PDF Icon" width="75px" loading="lazy">
                 <p id="cv-label">cv.pdf</p>
             </a>
