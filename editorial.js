@@ -37,8 +37,12 @@ $(document).ready(function () {
                 `<img id="change" src="/assets/img/work/editorial/editorial-menu/LBD-Editorial-Menu-NGV.jpg"
                 alt="NGV Catalogue" width="100%">`
             );
-        }
-        else {
+        } else if (this.id == 'editorial-menu-beverley') {
+            $('#editorial-img-cont').html(
+                `<img id="change" src="/assets/img/work/editorial/editorial-menu/LBD-Editorial-Menu-Beverley.jpg"
+            alt="121 Beverley" width="100%">`
+            );
+        } else {
             $('#editorial-img-cont').html(
                 `<img id="change" src="/assets/img/work/editorial/editorial-menu/LBD-Editorial-Menu-Este.jpg"
                 alt="L'arte Della Ceramiche" width="100%">`
