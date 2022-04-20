@@ -1,18 +1,3 @@
-@font-face {
-    font-family: "SuisseIntlMono-Reg";
-    src: url(assets/type/SuisseIntlMono-Regular-WebS.woff); 
-  }
-
-  @font-face {
-    font-family: "SuisseIntlMono-Bold";
-    src: url(assets/type/SuisseIntlMono-Bold-WebS.woff); 
-  }
-
-  @font-face {
-    font-family: "Necto-Mono";
-    src: url(assets/type/Necto-Mono.woff2); 
-  }
-
 #website-menu{
     background-color: black;
     transition: ease;
@@ -57,9 +42,9 @@
     align-items: center;
     flex-wrap: wrap;
     z-index: -1;
-    height: 96vh;
-    width: 97vw;
-    padding: 100px 0px 0px 40px;
+    width: 100vw;
+    height: 100vh;
+    padding: 100px 100px 40px 100px;
     text-decoration: none !important;
 }
 
@@ -67,7 +52,7 @@
     text-decoration: none !important;
 }
 
-.screen{
+.screen{   
     padding-top: 10px;
     border: solid 1px black;
     border-radius: 4px 4px 0px 0px;
@@ -79,8 +64,8 @@
     filter: grayscale(0%);
 }
 
-#websites-container div{
-    margin: 0px 0px 20px 0px;
+#websites-container > div{
+    margin: 20px;
     text-decoration: none !important;
 }
 #websites-container div hr{
@@ -100,7 +85,10 @@
     justify-content: space-between;
     align-items: baseline;
     line-height: 1;
-    font-size: 70%;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 90%;
+    letter-spacing: initial;
     text-decoration: none !important;
 }
 
