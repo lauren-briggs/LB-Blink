@@ -62,13 +62,13 @@
     display: grid;
     position: fixed;
     width: 100vw;
-    height:100vh;
-    margin-top: 30px;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 50vh 50vh;
+    grid-template-rows: 50% 50%;
     align-items: center;
     text-transform: uppercase;
-    /* border-bottom: solid 1px black; */
+    border-bottom: solid 1px black;
 }
 
 .branding-menu-item{
