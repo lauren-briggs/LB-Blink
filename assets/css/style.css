@@ -1,7 +1,21 @@
+@font-face {
+    font-family: Magnet-Light;
+    src: url(/assets/type/magnet/Magnet-Light.woff);
+  }
+  @font-face {
+    font-family: Magnet-Light-Italic;
+    src: url(/assets/type/magnet/Magnet-LightItalic.woff);
+  }
+@font-face {
+    font-family: Magnet-Regular;
+    src: url(/assets/type/magnet/Magnet-Regular.woff);
+  }
+  
 body{
     width: 100%;
     margin: 0% auto;
-    font-family: degular-text, sans-serif;
+    font-family: Magnet-Light, sans-serif;
+    font-weight: lighter;
 }
 
 html {
@@ -163,10 +177,8 @@ a:visited{
     line-height:inherit;
     height: 150px;
     width: 150px;
-    font-size:70%;
+    font-size:75%;
     text-transform: uppercase;
-    font-family: degular-text, sans-serif;
-    font-weight: 500;
     font-style: normal;
   }
   
@@ -185,8 +197,8 @@ a:visited{
     display: flex;
     justify-content:center;
     align-items:center;
-    font-size:80%;
-    letter-spacing: 0.25px;
+    font-size:75%;
+    letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
     line-height: 125%;
@@ -202,12 +214,13 @@ a:visited{
     z-index: 200;
 }
 #cv-label{
-    font-size: small;
+    font-size: 70%;
     color:rgb(70, 70, 70);
     text-decoration: none;
+    text-transform: uppercase;
 }
 
-#cv-label:hover{
+#CV-cont:hover #cv-label{
     text-decoration: underline;
 }
 
@@ -221,12 +234,13 @@ a:visited{
     z-index: 200;
 }
 #cover-label{
-    font-size: small;
+    font-size: 70%;
     color:rgb(70, 70, 70);
     text-decoration: none;
+    text-transform: uppercase;
 }
 
-#cover-label:hover{
+#cover-cont:hover #cover-label{
     text-decoration: underline;
 }
 
@@ -235,7 +249,18 @@ a:visited{
     margin-top: 120px;
     display: flex;
     width: 100vw;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#docs-cont p{
+    font-size: 90%;
+    line-height: 120%;
+}
+
+#ref-ital{
+    font-family: Magnet-Light-Italic;
+    font-style: italic;
 }
 
 #cv-grid-cont{
@@ -244,11 +269,18 @@ a:visited{
     overflow: scroll;
     border: solid 1px black;
     padding: 20px;
-    display: grid;
     justify-content: start;
     align-content: start;
     gap: 5px;
     line-height: 120%;
+}
+
+#cv-close-cont{
+    display: none;
+}
+
+#cv-close-cont.showme{
+    display: flex;
 }
 
 #cv-grid-cont h1{
@@ -285,10 +317,29 @@ a:visited{
 }
 
 #cover-letter-cont{
-    display: flex;
     justify-content: center;
-    /* display: none; */
+    display: none;
     /* padding-left: 300px; */
+}
+
+#cover-letter-cont.showme{
+    display: flex;
+}
+
+.close{
+    padding-right: 10px;
+    position: relative;
+    top: 8px;
+    left: calc(100% - 70px);
+    cursor: pointer;
+}
+
+.close-word{
+    visibility: hidden;
+}
+
+.close:hover .close-word{
+    visibility: visible;
 }
 
 #cover-letter{
@@ -313,7 +364,6 @@ a:visited{
 /* Handle */
 #cover-letter-cont ::-webkit-scrollbar-thumb {
   background: black;
-  border-radius: 50px;
   display: none;
 }
 

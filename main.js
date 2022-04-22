@@ -32,7 +32,7 @@ $(document).ready(function () {
 
         letters.each(function (i, el) {
             $(el).css({
-                transform: `translate(${w / 2 - 3}px,0px) rotate(${i * angle - text.length * angle / 4}deg)`,
+                transform: `translate(${w / 2 - 3}px,0px) rotate(${i * angle - text.length * angle / 3.5}deg)`,
             })
         });
     }
@@ -90,7 +90,30 @@ $(document).ready(function () {
         }
     });
 
-    // pause on hover
+    // show cv and cover letter on click
 
+    var cvIcon = $('#CV-cont');
+    var coverLetterIcon = $('#cover-cont');
+    var cvCont = $('#cv-close-cont');
+    var coverLetterCont = $('#cover-letter-cont');
+
+    cvIcon.click(function () {
+        cvCont.addClass('showme');
+    })
+    coverLetterIcon.click(function () {
+        coverLetterCont.addClass('showme');
+    })
+
+    // close
+    var closeBtn = $('.close');
+
+    closeBtn.click(function () {
+        var parent = $(this).parent(0)[0];
+        if (parent.id == 'cv-close-cont') {
+            cvCont.removeClass('showme');
+        } else if (parent.id == 'cover-letter-cont') {
+            coverLetterCont.removeClass('showme');
+        }
+    })
 
 });
