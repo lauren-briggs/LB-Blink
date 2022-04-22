@@ -1,15 +1,7 @@
 $(document).ready(function () {
 
-
-
     // editorial menu function - change img on hover
     const listItem = $('.editorial-menu-item');
-    var edImgCont = $('#editorial-img-cont');
-    var imgChange
-    // var change = $('#change');
-    // var pauseIcon = $('#pause')
-    // var aboutMove = $('#about-move');
-    // var logo = $('#logo');
 
     listItem.mouseover(function () {
         if (this.id == 'editorial-menu-este') {

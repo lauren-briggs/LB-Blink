@@ -1,15 +1,8 @@
 $(document).ready(function () {
 
-
-
     // editorial menu function - change img on hover
     const projectCont = $('.branding-menu-item');
-    // var edImgCont = $('#editorial-img-cont');
     var imgChange
-    // var change = $('#change');
-    // var pauseIcon = $('#pause')
-    // var aboutMove = $('#about-move');
-    // var logo = $('#logo');
 
     projectCont.mouseover(function () {
         if (this.id == 'branding-menu-wilson') {

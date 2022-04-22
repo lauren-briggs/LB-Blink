@@ -34,29 +34,6 @@
    padding-left: 10px;
    transition: ease;
 }
-/* 
-#editorial-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-} */
-
-/* #editorial-img-cont{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    border-bottom: solid 1px black;
-    align-items: center;
-    justify-content: center;
-    margin-top: 60px;
-} */
-/* 
-#editorial-img-cont img{
-    width: 70%;
-} */
 
 #branding-menu-cont{
     display: grid;
@@ -81,6 +58,7 @@
     align-items: center;
     justify-content: center;
     background-image: none;
+    /* cursor: pointer; */
 }
 
 #branding-menu-wilson.showme{
