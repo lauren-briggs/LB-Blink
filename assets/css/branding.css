@@ -64,7 +64,7 @@
     width: 100vw;
     height: calc(100vh - 60px);
     margin-top: 60px;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50% 50%;
     align-items: center;
     text-transform: uppercase;
@@ -80,27 +80,51 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-/* 
-#editorial-menu-cont li{
-    display: inline-block;
-    padding: 10px;
+    background-image: none;
 }
 
-#editorial-menu-cont li:hover{  
-    text-decoration: underline;
-    cursor: pointer;
+#branding-menu-wilson.showme{
+    background-image: url('/assets/img/work/branding/branding-menu/LBD-Wilson.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.ed-img-item{
+#branding-menu-am.showme{
+    background-image: url('/assets/img/work/branding/branding-menu/LBD-AM.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#branding-menu-tdr.showme{
+    background-image: url('/assets/img/work/branding/branding-menu/LBD-TDR.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#branding-menu-boozery.showme{
+    background-image: url('/assets/img/work/branding/branding-menu/LBD-Boozery.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#branding-menu-lampedusa.showme{
+    background-image: url('/assets/img/work/branding/branding-menu/LBD-lampedusa.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#branding-menu-frosty.showme{
+    background-image: url('/assets/img/work/branding/branding-menu/LBD-frosty.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#branding-menu-wilson.showme p,
+#branding-menu-am.showme p,
+#branding-menu-tdr.showme p,
+#branding-menu-lampedusa.showme p,
+#branding-menu-boozery.showme p,
+#branding-menu-frosty.showme p{
     display: none;
-    filter: grayscale(100%);
-    transition: ease;
 }
-#este-img-cont{
-    display: block;
-}
-.ed-img-item:hover{
-    filter: grayscale(0%);
-}
- */
+
