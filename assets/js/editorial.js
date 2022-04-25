@@ -42,7 +42,4 @@ $(document).ready(function () {
         }
     });
 
-    // pause on hover
-
-
 });

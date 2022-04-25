@@ -113,7 +113,7 @@ a:visited{
     border-bottom: 10px solid transparent;
 }
 
-#home-menu{
+#home-nav{
     border-left: solid 1.25px black;
 }
 
@@ -261,6 +261,7 @@ a:visited{
 #ref-ital{
     font-family: Magnet-Light-Italic;
     font-style: italic;
+    padding-top: 5px;
 }
 
 #cv-grid-cont{
@@ -272,7 +273,7 @@ a:visited{
     justify-content: start;
     align-content: start;
     gap: 5px;
-    line-height: 120%;
+    line-height: 130%;
 }
 
 #cv-close-cont{
@@ -286,24 +287,25 @@ a:visited{
 #cv-grid-cont h1{
     text-transform: uppercase;
     font-weight: 400;
-    /* padding-bottom: px; */
 }
 #cv-grid-cont h3{
     text-transform: uppercase;
     font-weight: 400;
-    padding-top: 5px;
+    padding: 5px 0px;
     margin-top: 10px;
     font-size: 90%;
     border-top: solid 1px black;
 }
 
 #fine-line{
-    margin-top: 4px;
+    margin: 2px 0px 4px;
     border-top: solid 0.5px black;
 }
 
 #cv-grid-cont p{
     font-size: 90%;
+    line-height: 130%;
+    padding-bottom: 5px;
 }
 
 .cv-grid-row{

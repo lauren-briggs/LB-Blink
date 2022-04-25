@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="https://use.typekit.net/xro5beg.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/editorial.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
     <!-- JAVASCRIPT LINKS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- MAIN JS -->
-    <script src="main.js" charset="utf-8"></script>
-    <script src="editorial.js" charset="utf-8"></script>
+    <script src="/assets/js/main.js" charset="utf-8"></script>
+    <script src="/assets/js/editorial.js" charset="utf-8"></script>
     <!-- ION ICON -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -44,16 +46,16 @@
                 </div>
             </div>
             <div class="nav-cont">
-                <div class="nav-item" id="home-menu">
+                <div class="nav-item" id="home-nav">
                     <a href="/index.html">Home</a>
                 </div>
-                <div class="nav-item" id="editorial-menu">
+                <div class="nav-item" id="editorial-nav">
                     <a href="/editorial.html">Editorial</a>
                 </div>
-                <div class="nav-item" id="branding-menu">
+                <div class="nav-item" id="branding-nav">
                     <a href="/branding.html">Branding</a>
                 </div>
-                <div class="nav-item" id="website-menu">
+                <div class="nav-item" id="website-nav">
                     <a href="/sites.html">Websites</a>
                 </div>
             </div>
@@ -71,40 +73,31 @@
         </div>
         <div id="editorial-container">
             <div id="editorial-menu-cont">
-                <ul>
-                    <li id="editorial-menu-este" class="editorial-menu-item">
-                        L'arte Della Ceramiche
-                    </li>
-                    <li id="editorial-menu-am" class="editorial-menu-item">
-                        Arctic Mirage Portfolio
-                    </li>
-                    <li id="editorial-menu-hyphen" class="editorial-menu-item">
-                        Hyphen Press Catalogue
-                    </li>
-                    <li id="editorial-menu-drake" class="editorial-menu-item">
-                        Drake Brighton
-                    </li>
-                    <li id="editorial-menu-ngv" class="editorial-menu-item">
-                        NGV Catalogue
-                    </li>
-                    <li id="editorial-menu-beverley" class="editorial-menu-item">
-                        121 Beverley
-                    </li>
-                </ul>
+                <a href="/editorial/editorial-este.html" id="editorial-menu-este" class="editorial-menu-item">
+                    L'arte Della Ceramiche
+                </a>
+                <a href="/editorial/editorial-am.html" id="editorial-menu-am" class="editorial-menu-item">
+                    Arctic Mirage Portfolio
+                </a>
+                <a href="/editorial/editorial-hyphen.html" id="editorial-menu-hyphen" class="editorial-menu-item">
+                    Hyphen Press Catalogue
+                </a>
+                <a href="/editorial/editorial-drake.html" id="editorial-menu-drake" class="editorial-menu-item">
+                    Drake Brighton
+                </a>
+                <a href="/editorial/editorial-ngv.html" id="editorial-menu-ngv" class="editorial-menu-item">
+                    NGV Catalogue
+                </a>
+                <a href="/editorial/editorial-beverley.html" id="editorial-menu-beverley" class="editorial-menu-item">
+                    121 Beverley
+                </a>
             </div>
             <div id="editorial-img-cont">
                 <img id="change" src="/assets/img/work/editorial/editorial-menu/LBD-Editorial-Menu-Este.jpg"
-                    alt="L'arte Della Ceramiche" width="80%">
+                    alt="L'arte Della Ceramiche" width="100%">
             </div>
 
         </div>
-
-        <!-- <div id="CV-icon">
-            <a href="/assets/img/CV.pdf" target="blank" alt="CV">
-                <img src="assets/img/LBD-CV-Icon-Small.png" alt="CV PDF Icon" width="75px" loading="lazy">
-                <p id="cv-label">cv.pdf</p>
-            </a>
-        </div> -->
     </main>
 </body>
 

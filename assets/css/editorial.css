@@ -1,9 +1,9 @@
-#editorial-menu{
+#editorial-nav{
     background-color: black;
     transition: ease;
 }
 
-#editorial-menu a{
+#editorial-nav a{
     color: white;
     transition: ease;
 }
@@ -50,7 +50,7 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-    padding-top: 60px;
+    padding: 60px 0px;
 }
 
 #editorial-menu-ngv{
@@ -60,16 +60,26 @@
 
 
 #editorial-menu-cont{
-    /* width: 50vw; */
-    /* height: 100vh; */
     font-size: 110%;
     line-height: 140%;
     text-align: left;
-    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
     margin: 75px 0px 0px 20px;
 }
 
-#editorial-menu-cont li:hover{  
+#editorial-menu-cont a{
+    text-transform:none !important;
+}
+
+button{
+    border: none;
+    background-color: white;
+    text-align: left;
+    
+}
+
+#editorial-menu-cont button:hover{  
     text-decoration: underline;
     cursor: pointer;
 }
@@ -86,3 +96,39 @@
     filter: grayscale(0%);
 }
 
+.swiper{
+    width: 100%;
+}
+
+.swiper-pagination{
+    position: fixed !important;
+    bottom: 0px !important;
+    width: 70vw !important;
+    height: 60px !important;
+    margin-left: 30vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 0px !important; */
+    border-top: solid 1px black !important;
+}
+
+.swiper-pagination-bullet{
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,6px)) !important;
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,6px)) !important;
+    display: inline-block !important;
+    border-radius: 50% !important;
+    background: white !important;
+    border: solid 1px black !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active{
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,6px)) !important;
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,6px)) !important;
+    display: inline-block !important;
+    border-radius: 50% !important;
+    background: black !important;
+    /* border: solid 1px black !important; */
+    opacity: 1 !important;
+}

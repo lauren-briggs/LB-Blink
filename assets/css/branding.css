@@ -1,9 +1,9 @@
-#branding-menu{
+#branding-nav{
     background-color: black;
     transition: ease;
 }
 
-#branding-menu a{
+#branding-nav a{
     color: white;
     transition: ease;
 }

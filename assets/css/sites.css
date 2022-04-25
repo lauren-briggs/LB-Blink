@@ -1,9 +1,9 @@
-#website-menu{
+#website-nav{
     background-color: black;
     transition: ease;
 }
 
-#website-menu a{
+#website-nav a{
     color: white;
     transition: ease;
 }
