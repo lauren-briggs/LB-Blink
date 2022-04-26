@@ -2,8 +2,9 @@ $(document).ready(function () {
 
     // editorial menu function - change img on hover
     const listItem = $('.editorial-menu-item');
-
+    const initialText = $('#initial-text');
     function showProject() {
+        initialText.addClass('hide')
         // Getting the id value of the target el
         let i = $(this).attr("id");
         $(this).siblings().removeClass('active');

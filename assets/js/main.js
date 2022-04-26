@@ -1,15 +1,17 @@
 $(document).ready(function () {
 
     // transform text into circle
-    var circleText = $(".circle-text");
-    var text = circleText.text();
-    var letterArr = [];
+    const circleText = $(".circle-text");
+    const text = circleText.text();
+    const letterArr = [];
 
     function makeCircleText(circleText, radius) {
         circleText.css("min-width", "initial");
         circleText.css("min-height", "initial");
         var w = circleText.width(),
             h = circleText.height();
+        console.log(`Width: ${w}`);
+        console.log(`Height: ${h}`);
         circleText.css("min-width", w + "px");
         circleText.css("min-height", h + "px");
 
@@ -23,70 +25,65 @@ $(document).ready(function () {
         var letters = circleText.find("span");
         letters.css({
             position: "absolute",
-            height: `${radius}px`,
+            height: `250px`,
             transformOrigin: "center"
         });
-
+        console.log(radius)
         var angleRad = w / radius;
-        var angle = 3 * angleRad * 365 / Math.PI / text.length;
+        var angle = 1.5 * angleRad * 365 / Math.PI / text.length;
+        console.log(`Angle Rad: ${angleRad}`)
+        console.log(`Angle: ${angle}`)
 
         letters.each(function (i, el) {
             $(el).css({
-                transform: `translate(${w / 2 - 3}px,0px) rotate(${i * angle - text.length * angle / 3.5}deg)`,
+                transform: `translate(${w / 2.05}px,0px) rotate(${i * angle - text.length * angle}deg)`,
+                transformOrigin: "center"
             })
         });
     }
 
-    makeCircleText(circleText, 150);
+    makeCircleText(circleText, 125);
 
     // rotate text on scroll
-    $(window).scroll(function () {
-        var w = circleText.width();
-        $('.circle-text').css({
-            transform: `rotate(${window.pageYOffset / 2}deg)`,
-            transformOrigin: `center center`,
-        });
-    });
-
-    // disappear 'scroll' text on scroll
-    const scrollText = $('#scroll')
-    $(window).scroll(function () {
-        if ($(window).scrollTop() == 0) {
-            scrollText.css({
-                opacity: '1',
-                transition: '0.5s ease',
-            })
-        } else {
-            scrollText.css({
-                opacity: '0',
-                transition: '0.5s ease',
-            })
-        }
-    })
+    // $(window).load(function () {
+    //     var w = circleText.width();
+    //     $('.circle-text').css({
+    //         transform: `rotate(2deg)`,
+    //         transformOrigin: `center center`,
+    //     });
+    // });
 
     // pause button functionality
-    var pauseBtn = $('#pause-container')
-    var pauseIcon = $('#pause')
-    var aboutMove = $('#about-move');
-    var logo = $('#logo');
+    const pauseBtn = $('#pause-container')
+    const pauseIcon = $('#pause')
+    const aboutMove = $('#about-move');
+    const logo = $('#logo');
 
     pauseBtn.click(function () {
         if (this.value == 'pause') {
             aboutMove.css({
                 animationPlayState: 'paused',
             });
+            circleText.css({
+                animationPlayState: 'paused',
+            });
             logo.attr('src', 'assets/img/LBD-10.jpg');
             this.value = 'play';
             pauseIcon.addClass('showme');
-            console.log(`button value is now: ${this.value}`)
+            console.log(`animation paused`);
+            console.log(`button value: ${this.value}`);
         } else {
             aboutMove.css({
+                animationPlayState: '',
+            });
+            circleText.css({
                 animationPlayState: '',
             });
             logo.attr('src', 'assets/img/LBD-Gif-1A-02.gif');
             pauseIcon.removeClass('showme');
             this.value = 'pause';
-            console.log(`button value is now: ${this.value}`)
+            console.log(`animation playing`);
+            console.log(`button value: ${this.value}`);
         }
     });
 
