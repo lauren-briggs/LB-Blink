@@ -3,43 +3,88 @@ $(document).ready(function () {
     // editorial menu function - change img on hover
     const listItem = $('.editorial-menu-item');
 
-    listItem.mouseover(function () {
-        if (this.id == 'editorial-menu-este') {
-            $('#editorial-img-cont').html(
-                `<img id="change" src="/assets/img/work/editorial/editorial-menu/LBD-Editorial-Menu-Este.jpg"
-                alt="L'arte Della Ceramiche" width="100%">`
-            );
-        } else if (this.id == 'editorial-menu-am') {
-            $('#editorial-img-cont').html(
-                `<img id="change" src="/assets/img/work/editorial/editorial-menu/LBD-Editorial-Menu-AM.jpg"
-                alt="AM" width="100%">`
-            );
-        } else if (this.id == 'editorial-menu-hyphen') {
-            $('#editorial-img-cont').html(
-                `<img id="change" src="/assets/img/work/editorial/editorial-menu/LBD-Editorial-Menu-Hyphen.jpg"
-                alt="Hyphen Press Catalogue" width="100%">`
-            );
-        } else if (this.id == 'editorial-menu-drake') {
-            $('#editorial-img-cont').html(
-                `<img id="change" src="/assets/img/work/editorial/editorial-menu/LBD-Editorial-Menu-Drake.jpg"
-                alt="Drake Sales Manual" width="100%">`
-            );
-        } else if (this.id == 'editorial-menu-ngv') {
-            $('#editorial-img-cont').html(
-                `<img id="change" src="/assets/img/work/editorial/editorial-menu/LBD-Editorial-Menu-NGV.jpg"
-                alt="NGV Catalogue" width="100%">`
-            );
-        } else if (this.id == 'editorial-menu-beverley') {
-            $('#editorial-img-cont').html(
-                `<img id="change" src="/assets/img/work/editorial/editorial-menu/LBD-Editorial-Menu-Beverley.jpg"
-            alt="121 Beverley" width="100%">`
-            );
-        } else {
-            $('#editorial-img-cont').html(
-                `<img id="change" src="/assets/img/work/editorial/editorial-menu/LBD-Editorial-Menu-Este.jpg"
-                alt="L'arte Della Ceramiche" width="100%">`
-            );
-        }
-    });
+    function showProject() {
+        // Getting the id value of the target el
+        let i = $(this).attr("id");
+        $(this).siblings().css('text-decoration', 'none');
+        $(this).css('text-decoration', 'underline');
+        let projectName = i.split('-', 3)[2];
+
+        $('.swiper').siblings().each(function () {
+            $(this).removeClass('showme');
+        })
+
+        // creating a variable that holds the class name using i value and changing display to flex
+        $(`#swiper-${projectName}`).addClass('showme')
+        // $('.swiper-pagination').addClass('showme')
+
+        // swiper.slideNext();
+    }
+
+    function initSwiper() {
+        $(".swiper-container").each(function (index) {
+            $(this).addClass("instance-" + index);
+            let swiper = new Swiper(".instance-" + index, {
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                direction: 'horizontal',
+                effect: "fade",
+                enabled: true,
+                initialSlide: 0,
+                loop: true,
+                on: {
+                    init: function () {
+                        console.log('swiper initialized');
+                    },
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: 'true',
+                    dynamicBullets: true,
+                },
+                preloadImages: false,
+                lazy: true,
+                speed: 2500,
+            });
+
+        });
+    }
+
+    // swiper
+    // const swiper = new Swiper('.swiper', {
+    //     // Optional parameters
+    //     direction: 'horizontal',
+    //     loop: true,
+    //     autoplay: {
+    //         delay: 2000,
+    //         disableOnInteraction: false,
+    //     },
+    //     initialSlide: 0,
+    //     effect: 'fade',
+    //     on: {
+    //         init: function () {
+    //             console.log('swiper initialized');
+    //         },
+    //     },
+    //     pagination: {
+    //         el: '.swiper-pagination',
+    //         clickable: true,
+    //     },
+    //     preloadImages: false,
+    //     // Enable lazy loading
+    //     lazy: true,
+    //     // enabled: false,
+    //     // Navigation arrows
+    //     navigation: {
+    //         nextEl: '.swiper-button-next',
+    //         prevEl: '.swiper-button-prev',
+    //     },
+    //     speed: 2000,
+    // });
+
+    listItem.click(showProject);
+    listItem.click(initSwiper);
 
 });
