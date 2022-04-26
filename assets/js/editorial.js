@@ -6,8 +6,8 @@ $(document).ready(function () {
     function showProject() {
         // Getting the id value of the target el
         let i = $(this).attr("id");
-        $(this).siblings().css('text-decoration', 'none');
-        $(this).css('text-decoration', 'underline');
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
         let projectName = i.split('-', 3)[2];
 
         $('.swiper').siblings().each(function () {
@@ -51,38 +51,6 @@ $(document).ready(function () {
 
         });
     }
-
-    // swiper
-    // const swiper = new Swiper('.swiper', {
-    //     // Optional parameters
-    //     direction: 'horizontal',
-    //     loop: true,
-    //     autoplay: {
-    //         delay: 2000,
-    //         disableOnInteraction: false,
-    //     },
-    //     initialSlide: 0,
-    //     effect: 'fade',
-    //     on: {
-    //         init: function () {
-    //             console.log('swiper initialized');
-    //         },
-    //     },
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         clickable: true,
-    //     },
-    //     preloadImages: false,
-    //     // Enable lazy loading
-    //     lazy: true,
-    //     // enabled: false,
-    //     // Navigation arrows
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-    //     speed: 2000,
-    // });
 
     listItem.click(showProject);
     listItem.click(initSwiper);

@@ -74,6 +74,10 @@
     text-transform:none !important;
 }
 
+.editorial-menu-item.active{
+    text-decoration: underline;
+}
+
 .editorial-menu-item:hover{
     text-decoration: underline; 
 }
@@ -83,11 +87,6 @@ button{
     background-color: white;
     text-align: left;
     
-}
-
-#editorial-menu-cont button:hover{  
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 .ed-img-item{
