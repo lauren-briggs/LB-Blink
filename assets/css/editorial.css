@@ -82,13 +82,6 @@
     text-decoration: underline; 
 }
 
-button{
-    border: none;
-    background-color: white;
-    text-align: left;
-    
-}
-
 .ed-img-item{
     display: none;
     filter: grayscale(100%);
@@ -100,55 +93,6 @@ button{
 .ed-img-item:hover{
     filter: grayscale(0%);
 }
-
-.swiper{
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-pagination{
-    position: fixed !important;
-    bottom: 0px !important;
-    width: 70vw !important;
-    height: 60px !important;
-    margin-left: 15vw !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: solid 1px black !important;
-    /* border-left: solid 1px black; */
-}
-
-.swiper-pagination-bullet{
-    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,6px)) !important;
-    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,6px)) !important;
-    display: inline-block !important;
-    border-radius: 50% !important;
-    background: black !important;
-    border: solid 1px black !important;
-    opacity: 1 !important;
-}
-
-.swiper-pagination-bullet-active{
-    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,6px)) !important;
-    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,6px)) !important;
-    display: inline-block !important;
-    border-radius: 50% !important;
-    background: black !important;
-    opacity: 1 !important;
-}
-
-.swiper-slide{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: ;
-}
-
-/* .swiper.showme{
-    display: block;
-    opacity: 1;
-} */
 
 #swiper-este,
 #swiper-am,
@@ -178,4 +122,16 @@ button{
 
 #initial-text.hide{
     display: none;
+}
+
+.swiper-pagination{
+    position: fixed !important;
+    bottom: 0px !important;
+    width: 70vw !important;
+    height: 60px !important;
+    margin-left: 15vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1px black !important;
 }

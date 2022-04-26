@@ -2,56 +2,85 @@ $(document).ready(function () {
 
     // editorial menu function - change img on hover
     const projectCont = $('.branding-menu-item');
-    var imgChange
 
     projectCont.mouseover(function () {
-        if (this.id == 'branding-menu-wilson') {
-            imgChange = $("#branding-menu-wilson");
-            imgChange.addClass('showme');
-        } else if (this.id == 'branding-menu-tdr') {
-            imgChange = $("#branding-menu-tdr");
-            imgChange.addClass('showme');
-        } else if (this.id == 'branding-menu-am') {
-            imgChange = $("#branding-menu-am");
-            imgChange.addClass('showme');
-        } else if (this.id == 'branding-menu-lampedusa') {
-            imgChange = $("#branding-menu-lampedusa");
-            imgChange.addClass('showme');
-        } else if (this.id == 'branding-menu-boozery') {
-            imgChange = $("#branding-menu-boozery");
-            imgChange.addClass('showme');
-        } else if (this.id == 'branding-menu-frosty') {
-            imgChange = $("#branding-menu-frosty");
-            imgChange.addClass('showme');
+        let thisId = this.id.split('-', 3)[2];
+        if (thisId === 'back') {
+            console.log('back');
         } else {
-            this.removeClass('showme');
+            let checkProjectIsOpen = $(`#branding-${thisId}`).hasClass('showme');
+            if (checkProjectIsOpen === true) {
+                console.log('Project is open');
+            } else {
+                $(`#branding-menu-${thisId}`).addClass('showme');
+            }
         }
     });
     projectCont.mouseleave(function () {
-        if (this.id == 'branding-menu-wilson') {
-            imgChange = $("#branding-menu-wilson");
-            imgChange.removeClass('showme');
-        } else if (this.id == 'branding-menu-tdr') {
-            imgChange = $("#branding-menu-tdr");
-            imgChange.removeClass('showme');
-        } else if (this.id == 'branding-menu-am') {
-            imgChange = $("#branding-menu-am");
-            imgChange.removeClass('showme');
-        } else if (this.id == 'branding-menu-lampedusa') {
-            imgChange = $("#branding-menu-lampedusa");
-            imgChange.removeClass('showme');
-        } else if (this.id == 'branding-menu-boozery') {
-            imgChange = $("#branding-menu-boozery");
-            imgChange.removeClass('showme');
-        } else if (this.id == 'branding-menu-frosty') {
-            imgChange = $("#branding-menu-frosty");
-            imgChange.removeClass('showme');
+        let thisId = this.id.split('-', 3)[2];
+        if (thisId == 'back') {
+            console.log('back')
         } else {
-            this.removeClass('showme');
+            $(`#branding-menu-${thisId}`).removeClass('showme');
         }
     });
 
-    // pause on hover
+    function initSwiper() {
+        $(".swiper-container").each(function (index) {
+            $(this).addClass("instance-" + index);
+            let swiper = new Swiper(".instance-" + index, {
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                direction: 'horizontal',
+                effect: "fade",
+                enabled: true,
+                initialSlide: 0,
+                loop: true,
+                on: {
+                    init: function () {
+                        console.log('swiper initialized');
+                    },
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: 'true',
+                    dynamicBullets: true,
+                },
+                preloadImages: false,
+                lazy: true,
+                speed: 2500,
+            });
+        });
+    }
 
+    initSwiper();
+
+    const backBtn = $('#branding-menu-back');
+
+    projectCont.click(function () {
+        let clickedId = this.id.split('-', 3)[2]
+
+
+        $(`#branding-${clickedId}`).addClass('showme');
+        $(`#branding-menu-${clickedId}`).removeClass('showme');
+        if (clickedId === 'back') {
+            console.log('ignore');
+        } else {
+            $(`#branding-menu-${clickedId}`).css({
+                'grid-column-start': '1',
+                'grid-column-end': 'span 1',
+                'grid-row-start': '1',
+                'grid-row-end': 'span 1',
+            });
+            backBtn.addClass('showme');
+        }
+
+    });
+
+    backBtn.click(function () {
+        location.reload();
+    })
 
 });
