@@ -10,8 +10,6 @@ $(document).ready(function () {
         circleText.css("min-height", "initial");
         var w = circleText.width(),
             h = circleText.height();
-        console.log(`Width: ${w}`);
-        console.log(`Height: ${h}`);
         circleText.css("min-width", w + "px");
         circleText.css("min-height", h + "px");
 
@@ -20,19 +18,14 @@ $(document).ready(function () {
         });
         circleText.html(letterArr);
 
-        // console.log(letterArr)
-
         var letters = circleText.find("span");
         letters.css({
             position: "absolute",
             height: `${radius}px`,
             transformOrigin: "center"
         });
-        console.log(radius)
         var angleRad = w / radius;
         var angle = 3 * angleRad * 365 / Math.PI / text.length;
-        console.log(`Angle Rad: ${angleRad}`)
-        console.log(`Angle: ${angle}`)
 
         letters.each(function (i, el) {
             $(el).css({
@@ -112,5 +105,41 @@ $(document).ready(function () {
             coverLetterCont.removeClass('showme');
         }
     })
+
+    // menu on mobile
+    const menuBtn = $('#menu-mobile');
+    const menuMobile = $('#nav-cont-mobile');
+
+    menuBtn.click(function () {
+        if (menuBtn.hasClass('active') == true) {
+            menuMobile.removeClass('showme');
+            menuBtn.removeClass('active');
+        } else {
+            menuBtn.addClass('active');
+            menuMobile.addClass('showme');
+        }
+    });
+
+    $(window).on("resize", (function () {
+        if ($(window).width() > 768) {
+            menuMobile.removeClass('showme');
+            menuBtn.removeClass('active');
+        }
+        else {
+        }
+    }))
+
+    const homeBtn = $("#home-nav");
+    const homeBtnMobile = $("#home-nav-mobile");
+    const editorialBtn = $("#editorial-nav");
+
+    $(window).on("load", (function () {
+        if (document.location.pathname.indexOf("/index.html") === 0) {
+            homeBtn.css({ 'display': 'none', });
+            homeBtnMobile.css({ 'display': 'none', });
+            editorialBtn.css({ 'border-left': 'solid 1px black' });
+        }
+    }));
+
 
 });

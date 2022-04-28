@@ -1,3 +1,17 @@
+@media all and (max-width: 768px){
+    #menu-mobile{
+        display: inline-flex !important;
+        border-left: solid 1px black;
+    }
+    .menu-mobile-hide{
+        display: none;
+    }
+    #menu-mobile:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
 @media all and (max-width: 576px){
     #menu-mobile{
         display: inline-flex !important;
@@ -6,5 +20,8 @@
     }
     .menu-mobile-hide{
         display: none;
+    }
+    #pdf-cont{
+        flex-direction: column;
     }
 }

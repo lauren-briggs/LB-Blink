@@ -45,7 +45,8 @@
     grid-template-rows: 50% 50%;
     align-items: center;
     text-transform: uppercase;
-    /* border-bottom: solid 1px black; */
+    border-left: solid 0.5px black;
+    border-right: solid 0.5px black;
 }
 
 .branding-menu-item{

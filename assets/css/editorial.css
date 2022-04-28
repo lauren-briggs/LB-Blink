@@ -62,24 +62,30 @@
 
 #editorial-menu-cont{
     font-size: 110%;
-    line-height: 140%;
+    line-height: 120%;
     text-align: left;
+    width: 30vw;
     display: flex;
     flex-direction: column;
-    margin: 15px 0px 0px 20px;
+    border-left: solid 1px black;
+    /* margin: 15px 15px 0px 20px; */
     cursor: pointer;
+    /* padding-right: 20px; */
 }
 
-#editorial-menu-cont a{
-    text-transform:none !important;
+.editorial-menu-item{
+    border-bottom: solid 1px black;
+    padding: 20px;
 }
 
 .editorial-menu-item.active{
     text-decoration: underline;
+    text-underline-offset: 1px;
 }
 
 .editorial-menu-item:hover{
     text-decoration: underline; 
+    text-underline-offset: 1px;
 }
 
 .ed-img-item{
@@ -134,4 +140,68 @@
     justify-content: center;
     align-items: center;
     border-top: solid 1px black !important;
+}
+
+@media all and (max-width: 768px){
+    #menu-mobile{
+        display: inline-flex !important;
+        border-left: solid 1px black;
+    }
+    .menu-mobile-hide{
+        display: none;
+    }
+    #menu-mobile:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    #editorial-menu-cont li{
+        font-size: 90%;
+    }
+}
+
+@media all and (max-width: 768px){
+    #editorial-menu-cont li{
+        font-size: 90%;
+    }
+    #editorial-container{
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+    #editorial-img-cont{
+        width: 100vw;
+        border: solid 1px black;
+        border-top: none;
+        border-bottom: none;
+        padding-bottom: 0px;
+    }
+    #editorial-menu-cont{
+        border: solid 1px black;
+        border-bottom: none;
+        width: 100vw;
+        /* padding: 15px; */
+        margin: 0px;
+    }
+    .swiper-container{
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .swiper-pagination{
+        position: relative !important;
+        width: 100vw !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px !important;
+        height: 60px !important;
+        bottom: 0px !important;
+        border-top: solid 1px black;
+        left: 0px !important;
+        transform: translateX(0%) !important;
+        /* border-top: none; */
+    }
+}
+
+@media all and (max-width: 576px){
+    
 }
