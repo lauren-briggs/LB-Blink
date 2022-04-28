@@ -25,24 +25,24 @@ $(document).ready(function () {
         var letters = circleText.find("span");
         letters.css({
             position: "absolute",
-            height: `250px`,
+            height: `${radius}px`,
             transformOrigin: "center"
         });
         console.log(radius)
         var angleRad = w / radius;
-        var angle = 1.5 * angleRad * 365 / Math.PI / text.length;
+        var angle = 3 * angleRad * 365 / Math.PI / text.length;
         console.log(`Angle Rad: ${angleRad}`)
         console.log(`Angle: ${angle}`)
 
         letters.each(function (i, el) {
             $(el).css({
-                transform: `translate(${w / 2.05}px,0px) rotate(${i * angle - text.length * angle}deg)`,
+                transform: `translate(${w / 2 - 3}px,0px) rotate(${i * angle - text.length * angle / 3.5}deg)`,
                 transformOrigin: "center"
             })
         });
     }
 
-    makeCircleText(circleText, 125);
+    makeCircleText(circleText, 150);
 
     // rotate text on scroll
     // $(window).load(function () {

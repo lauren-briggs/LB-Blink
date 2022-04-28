@@ -82,6 +82,11 @@ a:visited{
     background-color: white;
 }
 
+#menu-mobile{
+    text-transform: uppercase;
+    display: none;
+}
+
 #logo{
     background-color: white;
     padding: 0px 10px;
@@ -166,19 +171,20 @@ a:visited{
     position: fixed;
     width: 100vw;
     margin-top: 30px;
+    right: 40px;
     height: calc(100vh - 60px);
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content:flex-end;
+    align-items:flex-end;
     z-index: -3;
 }
 
 .circle-text{
     position:fixed;
     line-height:inherit;
-    height: 250px;
-    width: 250px;
-    font-size:90%;
+    height: 150px;
+    width: 150px;
+    font-size:80%;
     text-transform: uppercase;
     font-style: normal;
     -moz-animation: spinCircleText 20s infinite;
@@ -222,12 +228,12 @@ a:visited{
   #logo-cont{
     position: fixed;
     z-index: 1;
-    width: 250px;
-    height: 250px;
+    width: 145px;
+    height: 150px;
     display: flex;
     justify-content:center;
     align-items:center;
-    font-size:90%;
+    font-size:80%;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;

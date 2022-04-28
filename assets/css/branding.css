@@ -139,8 +139,10 @@
 }
 
 #branding-menu-back:hover{
-    text-decoration: underline;
+    /* text-decoration: underline; */
     cursor: pointer;
+    background-color: black;
+    color: white;
 }
 
 .swiper{

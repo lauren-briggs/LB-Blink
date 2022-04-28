@@ -1,0 +1,10 @@
+@media all and (max-width: 576px){
+    #menu-mobile{
+        display: inline-flex !important;
+        border-left: solid 1px black;
+
+    }
+    .menu-mobile-hide{
+        display: none;
+    }
+}
