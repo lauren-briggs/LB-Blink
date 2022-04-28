@@ -62,30 +62,115 @@ $(document).ready(function () {
     const backBtn = $('#branding-menu-back');
 
     projectCont.click(function () {
+        // get id of clicked div
         let clickedId = this.id.split('-', 3)[2]
-
+        // show selected project
         $(`#branding-${clickedId}`).addClass('showme');
         $(`#branding-menu-${clickedId}`).removeClass('showme');
-        if (clickedId === 'back') {
-            console.log('ignore');
-        } else {
-            $(`#branding-menu-${clickedId}`).css({
-                'grid-column-start': '1',
-                'grid-column-end': 'span 1',
-                'grid-row-start': '1',
-                'grid-row-end': 'span 1',
-                // 'background-color': 'black',
-                // 'color': 'white',
-            });
-            backBtn.addClass('showme');
 
-            initSwiper();
+        // if button clicked was back reload page
+        if (clickedId === 'back') {
+            location.reload();
+        } else {
+            // get id of each menu item
+            $(`#branding-menu-${clickedId}`).siblings().each(function () {
+                let activeMenuItem = $(`#branding-menu-${clickedId}`)[0].id.split('-', 3)[2];
+                let activeProject = $(`#branding-${clickedId}`)[0].id.split('-')[1];
+                let i = this.id.split('-');
+                let iId = i[i.length - 1];
+                if (iId == 'back') {
+                    // if id = back, skip
+                    console.log('skip back');
+                } else if (iId == activeProject || iId == activeMenuItem) {
+                    // if the id matches the active/displayed project, skip
+                    console.log('skip project and menu');
+                } else {
+                    // if the id doesn't match, hide div
+                    console.log('not a match');
+                    console.log(this.id);
+                    $(`#${this.id}`).css({
+                        'display': 'none',
+                    });
+                }
+            });
+
+            // if window is larger than 1000px
+            if ($(window).width() > 1000) {
+                $(`#branding-menu-${clickedId}`).css({
+                    // bring title square to first position
+                    'grid-column-start': '1',
+                    'grid-column-end': 'span 1',
+                    'grid-row-start': '1',
+                    'grid-row-end': 'span 1',
+                });
+                // display back button
+                backBtn.addClass('showme');
+                // initialise swiper
+                initSwiper();
+            } else if ($(window).width() < 1000 && $(window).width() > 576) {
+                // if window is between 1000px and 576px
+                // redefine grid
+                $('#branding-menu-cont').css({
+                    'grid-template-columns': '1fr 1fr',
+                    'grid-template-rows': '3fr 1fr',
+                });
+                // 
+                $(`#branding-menu-${clickedId}`).css({
+                    'grid-column-start': '1',
+                    'grid-column-end': 'span 1',
+                    'grid-row-start': '2',
+                    'grid-row-end': 'span 1',
+                    // 'background-color': 'black',
+                    // 'color': 'white',
+                });
+                $(`#branding-${clickedId}`).css({
+                    'grid-column-start': '1',
+                    'grid-column-end': 'span 2',
+                    'grid-row-start': '1',
+                    'grid-row-end': 'span 1',
+                });
+                // display back button
+                backBtn.addClass('showme');
+                backBtn.css({
+                    'grid-column-start': '2',
+                    'grid-column-end': 'span 1',
+                    'grid-row-start': '2',
+                    'grid-row-end': 'span 1',
+                });
+                // initialise swiper
+                initSwiper();
+            } else if ($(window).width() < 576) {
+                // if window is less than 576px
+                // redefine grid
+                $('#branding-menu-cont').css({
+                    'grid-template-columns': '1fr',
+                    'grid-template-rows': '4fr 1fr 1fr',
+                });
+                // 
+                $(`#branding-menu-${clickedId}`).css({
+                    'grid-column-start': '1',
+                    'grid-column-end': 'span 1',
+                    'grid-row-start': '2',
+                    'grid-row-end': 'span 1',
+                });
+                $(`#branding-${clickedId}`).css({
+                    'grid-column-start': '1',
+                    'grid-column-end': 'span 1',
+                    'grid-row-start': '1',
+                    'grid-row-end': 'span 1',
+                });
+                // display back button
+                backBtn.addClass('showme');
+                backBtn.css({
+                    'grid-column-start': '1',
+                    'grid-column-end': 'span 1',
+                    'grid-row-start': '3',
+                    'grid-row-end': 'span 1',
+                });
+                // initialise swiper
+                initSwiper();
+            }
         }
 
     });
-
-    backBtn.click(function () {
-        location.reload();
-    })
-
 });
