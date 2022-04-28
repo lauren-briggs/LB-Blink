@@ -37,6 +37,9 @@ $(document).ready(function () {
                 effect: "fade",
                 enabled: true,
                 initialSlide: 0,
+                // updateOnWindowResize: false,
+                // autoHeight: true,
+                grabCursor: true,
                 loop: true,
                 on: {
                     init: function () {
