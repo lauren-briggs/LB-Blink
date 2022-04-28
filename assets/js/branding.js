@@ -58,13 +58,11 @@ $(document).ready(function () {
         });
     }
 
-    initSwiper();
 
     const backBtn = $('#branding-menu-back');
 
     projectCont.click(function () {
         let clickedId = this.id.split('-', 3)[2]
-
 
         $(`#branding-${clickedId}`).addClass('showme');
         $(`#branding-menu-${clickedId}`).removeClass('showme');
@@ -76,8 +74,12 @@ $(document).ready(function () {
                 'grid-column-end': 'span 1',
                 'grid-row-start': '1',
                 'grid-row-end': 'span 1',
+                // 'background-color': 'black',
+                // 'color': 'white',
             });
             backBtn.addClass('showme');
+
+            initSwiper();
         }
 
     });
