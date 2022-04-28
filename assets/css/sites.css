@@ -43,8 +43,7 @@
     flex-wrap: wrap;
     z-index: -1;
     width: 100vw;
-    height: 100vh;
-    padding: 100px 100px 40px 100px;
+    height: calc(100vh - 120px);
     text-decoration: none !important;
 }
 
@@ -52,28 +51,47 @@
     text-decoration: none !important;
 }
 
-.screen{   
-    padding-top: 10px;
+
+#search-bar{
+    width: calc(2000px / 2.5);
+    height: 20px;
     border: solid 1px black;
-    border-radius: 4px 4px 0px 0px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 8px 8px 0px 0px;
+    padding: 8px;
+}
+
+#website-display{
+    width: calc(2000px / 2.5);
+    height: calc((1114px / 2.5) + 20px);
+    border: solid 1px black;
+    border-top: none;
+    /* width: 100%; */
+    /* height: calc(1114px / 2.5); */
+    width: calc(2000px / 2.5);
+    height: calc(1114px / 2.5);
+    text-decoration: none !important;
     filter: grayscale(100%);
+    transition: 1s;
     cursor: pointer;
 }
 
-.screen:hover{
+#initial-text{
+    padding: 10px;
+}
+
+#website-display:hover{
+    transition: 1s;
     filter: grayscale(0%);
 }
 
-#websites-container > div{
-    margin: 20px;
-    text-decoration: none !important;
-}
-#websites-container div hr{
-    position: relative;
-    width: 400px;
-    top: 11px;
-    border:none;
-    border-top: solid 1px black;
+.search-bar-circle{
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+    border: solid 1px black;
+    border-radius: 50%;
 }
 
 .site-text{
@@ -101,4 +119,159 @@
 #websites-container div:hover .site-text{
     visibility: visible;
     text-decoration: none !important;
+}
+
+#footer{
+    height: 120px;
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+#websites-menu-cont{
+    height: 50%;
+    font-size: 90%;
+    line-height: 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+#websites-menu-cont ul{
+    width: 100vw;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border-top: solid 1px black; */
+    border-bottom: solid 1px black;
+}
+
+#websites-menu-cont li{
+    border: solid 0.5px black;
+    border-top: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.websites-menu-item{
+    border-bottom: solid 1px black;
+    padding: 20px;
+}
+
+.websites-menu-item.active{
+    text-decoration: underline;
+    text-underline-offset: 1px;
+}
+
+.websites-menu-item:hover{
+    text-decoration: underline; 
+    text-underline-offset: 1px;
+}
+
+#website-role{
+    text-transform: uppercase;
+    font-size: 90%;
+    display: none;
+    width: 100vw;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px black;
+    border-top: solid 0.5px black;
+}
+
+#website-role div{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 0.5px black;
+    border-bottom: none;
+}
+.websites-role-item{
+    padding: 20px;
+}
+
+#role-design.showme,
+#role-development.showme{
+   color: white;
+   background-color: black;
+}
+
+#website-role.showme{
+    display: inline-flex;
+}
+
+#main-website-cont{
+    display: flex;
+    height: calc(100vh - 60px);
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+@media all and (max-width: 1000px){
+    #website-display{
+        width: calc(2000px / 3);
+        height: calc(1114px / 3);
+    }
+    
+    #search-bar{
+        width: calc(2000px / 3);
+    }
+
+@media all and (max-width: 768px){
+    #website-display{
+        width: calc(2000px / 4);
+        height: calc(1114px / 4);
+    }
+    #search-bar{
+        width: calc(2000px / 4);
+    }
+    #footer{
+        height: auto;
+    }
+    #websites-menu-cont{
+        height: auto;
+    }
+    #websites-menu-cont ul{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+    #websites-menu-cont li{
+        border: solid 1px black;
+        border-top: none;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    #websites-container{
+        height: calc(50vh - 30px);
+        padding: 60px 0px;
+    }
+    
+}
+
+@media all and (max-width: 576px){
+    #website-display{
+        width: calc(2000px / 5);
+        height: calc(1114px / 5);
+    }
+    #search-bar{
+        width: calc(2000px / 5);
+    }
 }

@@ -17,6 +17,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
     <!-- MAIN JS -->
     <script src="/assets/js/main.js" charset="utf-8"></script>
+    <script src="/assets/js/sites.js" charset="utf-8"></script>
     <!-- ION ICON -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -80,63 +81,49 @@
                 <a href="/sites.html">Websites</a>
             </div>
         </div>
-        <div id="websites-container">
-            <div id="TAM">
-                <hr>
-                <a href="https://arcticmirage.com.au/" target="blank">
-                    <img src="/assets/img/work/sites/LBD-Websites-TAM-Desktop-04.jpg" alt="Arctic Mirage Website"
-                        id="TAM-img" class="screen" width="400px" loading="lazy">
-                    <div id="TAM-text" class="site-text">
-                        <p>Arctic Mirage</p>
-                        <p><span class="role">Design & Web Development</span></p>
-                    </div>
+
+        <section id="main-website-cont">
+            <div id="websites-container">
+                <div id="search-bar">
+                    <div class="search-bar-circle"></div>
+                    <div class="search-bar-circle"></div>
+                    <div class="search-bar-circle"></div>
+                    <div class="search-bar-text"></div>
+                </div>
+                <a href="" id="website-display" target="blank">
+                    <p id="initial-text">Select a website to get started...</p>
                 </a>
             </div>
-            <div id="H&G">
-                <hr>
-                <a href="https://www.huntergrace.com.au/" target="blank">
-                    <img src="/assets/img/work/sites/LBD-Websites-H&G-Desktop-02.jpg" alt="Hunter & Grace Website"
-                        id="H&G-img" class="screen" width="400px" loading="lazy">
-                    <div id="H&G-text" class="site-text">
-                        <p>Hunter & Grace</p>
-                        <p><span class="role">Design</span></p>
+            <div id="footer">
+                <div id="website-role">
+                    <div id="role-design" class="websites-role-item">
+                        Design
                     </div>
-                </a>
-            </div>
-            <div id="Drake">
-                <hr>
-                <a href="https://www.drakebrighton.com.au/" target="blank">
-                    <img src="/assets/img/work/sites/LBD-Websites-Drake-Desktop-01.jpg" alt="Drake Website"
-                        id="Drake-img" class="screen" width="400px" loading="lazy">
-                    <div id="Drake-text" class="site-text">
-                        <p>Drake Brighton</p>
-                        <p><span class="role">Design</span></p>
+                    <div id="role-development" class="websites-role-item">
+                        Development
                     </div>
-                </a>
+                </div>
+                <div id="websites-menu-cont">
+                    <ul>
+                        <li id="websites-menu-am" class="websites-menu-item">
+                            Arctic Mirage
+                        </li>
+                        <li id="websites-menu-hg" class="websites-menu-item">
+                            Hunter & Grace
+                        </li>
+                        <li id="websites-menu-drake" class="websites-menu-item">
+                            Drake Brighton
+                        </li>
+                        <li id="websites-menu-quiz" class="websites-menu-item">
+                            Coding Quiz
+                        </li>
+                        <li id="websites-menu-weather" class="websites-menu-item">
+                            Weather Dashboard
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div id="Code-Quiz">
-                <hr>
-                <a href="https://lauren-briggs.github.io/code-quiz/" target="blank">
-                    <img src="/assets/img/work/sites/LBD-Websites-Code-Quiz-Desktop-01.jpg" alt="Coding Quiz"
-                        id="Code-img" class="screen" width="400px" loading="lazy">
-                    <div id="Code-text" class="site-text">
-                        <p>Coding Quiz</p>
-                        <p><span class="role">Web Development</span></p>
-                    </div>
-                </a>
-            </div>
-            <div id="Weather">
-                <hr>
-                <a href="https://lauren-briggs.github.io/weather-dashboard/" target="blank">
-                    <img src="/assets/img/work/sites/LBD-Websites-Weather-Desktop-01.jpg" alt="Weather Dashboard"
-                        id="Weather-img" class="screen" width="400px" loading="lazy">
-                    <div id="Weather-text" class="site-text">
-                        <p>Weather Dashboard</p>
-                        <p><span class="role">Web Development</span></p>
-                    </div>
-                </a>
-            </div>
-        </div>
+            <!-- </section> -->
     </main>
 </body>
 

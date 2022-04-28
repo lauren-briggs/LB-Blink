@@ -44,6 +44,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50% 50%;
     align-items: center;
+    font-size: 90%;
     text-transform: uppercase;
     border-left: solid 0.5px black;
     border-right: solid 0.5px black;

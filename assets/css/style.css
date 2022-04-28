@@ -285,6 +285,7 @@ a:visited{
     left: 30px;
     display: flex;
     flex-direction: row;
+    z-index: 1;
 }
 
 #CV-cont{
@@ -324,11 +325,13 @@ a:visited{
 
 #docs-cont{
     position: fixed;
-    margin-top: 120px;
+    margin-top: 60px;
     display: flex;
     width: 100vw;
+    height: calc(100vh - 60px);
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 #docs-cont p{
@@ -344,6 +347,7 @@ a:visited{
 
 #cv-grid-cont{
     width: 40vw;
+    min-width: 400px;
     height: 80vh;
     overflow: scroll;
     border: solid 1px black;
@@ -353,6 +357,7 @@ a:visited{
     align-content: start;
     gap: 5px;
     line-height: 130%;
+    overflow: scroll;
 }
 
 #cv-close-cont{
@@ -425,6 +430,7 @@ a:visited{
 
 #cover-letter{
     width: 40vw;
+    min-width: 400px;
     height: 80vh;
     overflow: scroll;
     border: solid 1px black;
@@ -433,6 +439,7 @@ a:visited{
 }
 
 /* width */
+#cv-grid-cont ::-webkit-scrollbar,
 #cover-letter-cont ::-webkit-scrollbar {
   width: 5px;
 }
@@ -444,12 +451,14 @@ a:visited{
 } */
 
 /* Handle */
+#cv-grid-cont ::-webkit-scrollbar-thumb,
 #cover-letter-cont ::-webkit-scrollbar-thumb {
   background: black;
   display: none;
 }
 
 /* Handle on hover */
+#cv-grid-cont:hover ::-webkit-scrollbar-thumb,
 #cover-letter-cont:hover ::-webkit-scrollbar-thumb{
  display: block;
 }
