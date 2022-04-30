@@ -330,7 +330,7 @@ a:visited{
     width: 100vw;
     height: calc(100vh - 60px);
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -416,7 +416,7 @@ a:visited{
     padding-right: 10px;
     position: relative;
     top: 8px;
-    left: calc(100% - 70px);
+    left: calc(100% - 80px);
     cursor: pointer;
 }
 
@@ -439,26 +439,44 @@ a:visited{
 }
 
 /* width */
-#cv-grid-cont ::-webkit-scrollbar,
 #cover-letter-cont ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
-/* #cover-letter-cont ::-webkit-scrollbar-track {
-  background: black;
-  border-radius: 5px;
-} */
-
 /* Handle */
-#cv-grid-cont ::-webkit-scrollbar-thumb,
 #cover-letter-cont ::-webkit-scrollbar-thumb {
   background: black;
   display: none;
 }
 
 /* Handle on hover */
-#cv-grid-cont:hover ::-webkit-scrollbar-thumb,
 #cover-letter-cont:hover ::-webkit-scrollbar-thumb{
  display: block;
+}
+
+/* width */
+#cv-close-cont ::-webkit-scrollbar{
+  width: 5px;
+}
+
+/* Handle */
+#cv-close-cont ::-webkit-scrollbar-thumb{
+  background: black;
+  display: none;
+}
+
+/* Handle on hover */
+#cv-close-cont:hover ::-webkit-scrollbar-thumb{
+ display: block;
+}
+
+#initial-text{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }

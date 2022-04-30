@@ -37,8 +37,9 @@
 
 #websites-container{
     display: flex;
+    flex-direction: column;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     z-index: -1;
@@ -72,18 +73,12 @@
     width: calc(2000px / 2.5);
     height: calc(1114px / 2.5);
     text-decoration: none !important;
-    filter: grayscale(100%);
     transition: 1s;
     cursor: pointer;
 }
 
 #initial-text{
     padding: 10px;
-}
-
-#website-display:hover{
-    transition: 1s;
-    filter: grayscale(0%);
 }
 
 .search-bar-circle{
@@ -134,13 +129,14 @@
 }
 
 #websites-menu-cont{
-    height: 50%;
+    height: 60px;
     font-size: 90%;
     line-height: 120%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    border-top: solid 1px black;
 }
 
 #websites-menu-cont ul{
@@ -150,7 +146,7 @@
     justify-content: center;
     align-items: center;
     /* border-top: solid 1px black; */
-    border-bottom: solid 1px black;
+    /* border-bottom: solid 1px black; */
 }
 
 #websites-menu-cont li{
@@ -183,10 +179,10 @@
     font-size: 90%;
     display: none;
     width: 100vw;
-    height: 50%;
+    height: 60px;
     justify-content: center;
     align-items: center;
-    border-bottom: solid 1px black;
+    /* border-bottom: solid 1px black; */
     border-top: solid 0.5px black;
 }
 
@@ -216,7 +212,8 @@
 
 #main-website-cont{
     display: flex;
-    height: calc(100vh - 60px);
+    height: 100vh;
+    width: 100vw;
     flex-direction: column;
     padding-top: 60px;
 }
@@ -260,18 +257,26 @@
         cursor: pointer;
     }
     #websites-container{
-        height: calc(50vh - 30px);
+        height: 100%;
         padding: 60px 0px;
     }
+
+    #main-website-cont{
+        justify-content: flex-end;
+    }
+
     
 }
 
 @media all and (max-width: 576px){
     #website-display{
-        width: calc(2000px / 5);
-        height: calc(1114px / 5);
+        width: calc(2000px / 6);
+        height: calc(1114px / 6);
     }
     #search-bar{
-        width: calc(2000px / 5);
+        width: calc(2000px / 6);
+    }
+    #initial-text{
+        font-size: 90%;
     }
 }
