@@ -227,6 +227,7 @@
     #search-bar{
         width: calc(2000px / 3);
     }
+}
 
 @media all and (max-width: 768px){
     #website-display{
@@ -263,9 +264,7 @@
 
     #main-website-cont{
         justify-content: flex-end;
-    }
-
-    
+    } 
 }
 
 @media all and (max-width: 576px){

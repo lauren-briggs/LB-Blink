@@ -203,9 +203,3 @@
         /* border-top: none; */
     }
 }
-
-@media all and (max-width: 576px){
-    .swiper-wrapper{
-        /* padding: 60px 0px; */
-    }
-}
