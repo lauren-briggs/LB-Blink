@@ -23,6 +23,7 @@ $(document).ready(function () {
             "background-position": "center",
         });
 
+        console.log(displayEl[0]);
         console.log(displayEl[0].attributes);
         $('#website-role').addClass('showme');
         let designRole = $('#role-design');
