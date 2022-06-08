@@ -1,14 +1,14 @@
 @font-face {
     font-family: Magnet-Light;
-    src: url(/lbd-blink/assets/type/magnet/Magnet-Light.woff);
+    src: url(/lbd/assets/type/magnet/Magnet-Light.woff);
   }
   @font-face {
     font-family: Magnet-Light-Italic;
-    src: url(/lbd-blink/assets/type/magnet/Magnet-LightItalic.woff);
+    src: url(/lbd/assets/type/magnet/Magnet-LightItalic.woff);
   }
 @font-face {
     font-family: Magnet-Regular;
-    src: url(/lbd-blink/assets/type/magnet/Magnet-Regular.woff);
+    src: url(/lbd/assets/type/magnet/Magnet-Regular.woff);
   }
   
 body{
