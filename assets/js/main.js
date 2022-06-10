@@ -80,31 +80,44 @@ $(document).ready(function () {
         }
     });
 
+    // replace logo with home on hover
+    const logoHomeEl = $('#logo-home-btn');
+    const homeBtnNew = $('#home-btn');
+
+    logoHomeEl.mouseover(function () {
+        logo.addClass('hideme');
+        homeBtnNew.addClass('showme');
+    })
+    logoHomeEl.mouseleave(function () {
+        logo.removeClass('hideme');
+        homeBtnNew.removeClass('showme');
+    })
+
+
     // show cv and cover letter on click
+    // var cvIcon = $('#CV-cont');
+    // var coverLetterIcon = $('#cover-cont');
+    // var cvCont = $('#cv-close-cont');
+    // var coverLetterCont = $('#cover-letter-cont');
 
-    var cvIcon = $('#CV-cont');
-    var coverLetterIcon = $('#cover-cont');
-    var cvCont = $('#cv-close-cont');
-    var coverLetterCont = $('#cover-letter-cont');
-
-    cvIcon.click(function () {
-        cvCont.addClass('showme');
-    })
-    coverLetterIcon.click(function () {
-        coverLetterCont.addClass('showme');
-    })
+    // cvIcon.click(function () {
+    //     cvCont.addClass('showme');
+    // })
+    // coverLetterIcon.click(function () {
+    //     coverLetterCont.addClass('showme');
+    // })
 
     // close
-    var closeBtn = $('.close');
+    // var closeBtn = $('.close');
 
-    closeBtn.click(function () {
-        var parent = $(this).parent(0)[0];
-        if (parent.id == 'cv-close-cont') {
-            cvCont.removeClass('showme');
-        } else if (parent.id == 'cover-letter-cont') {
-            coverLetterCont.removeClass('showme');
-        }
-    })
+    // closeBtn.click(function () {
+    //     var parent = $(this).parent(0)[0];
+    //     if (parent.id == 'cv-close-cont') {
+    //         cvCont.removeClass('showme');
+    //     } else if (parent.id == 'cover-letter-cont') {
+    //         coverLetterCont.removeClass('showme');
+    //     }
+    // })
 
     // menu on mobile
     const menuBtn = $('#menu-mobile');
