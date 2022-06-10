@@ -46,8 +46,8 @@
     align-items: center;
     font-size: 90%;
     text-transform: uppercase;
-    border-left: solid 0.5px black;
-    border-right: solid 0.5px black;
+    /* border-left: solid 0.5px black; */
+    /* border-right: solid 0.5px black; */
 }
 
 .branding-menu-item{
@@ -63,52 +63,81 @@
     cursor: pointer;
 }
 
-#branding-menu-wilson.showme{
+#branding-menu-wilson,
+#branding-menu-am,
+#branding-menu-tdr,
+#branding-menu-boozery,
+#branding-menu-lampedusa,
+#branding-menu-frosty{
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    color: white;
+    transition: ease 0.5s;
+    cursor: none;
+}
+#branding-menu-am{
+    filter: opacity(95%);
+    transition: ease 0.5s;
+}
+
+#branding-menu-wilson{
     background-image: url('/assets/img/work/branding/branding-menu/LBD-Wilson.jpg');
-    background-size: cover;
-    background-position: center;
 }
-
-#branding-menu-am.showme{
+#branding-menu-am{
     background-image: url('/assets/img/work/branding/branding-menu/LBD-AM.jpg');
-    background-size: cover;
-    background-position: center;
 }
-
-#branding-menu-tdr.showme{
+#branding-menu-tdr{
     background-image: url('/assets/img/work/branding/branding-menu/LBD-TDR.jpg');
-    background-size: cover;
-    background-position: center;
 }
-
-#branding-menu-boozery.showme{
+#branding-menu-boozery{
     background-image: url('/assets/img/work/branding/branding-menu/LBD-Boozery.jpg');
-    background-size: cover;
-    background-position: center;
 }
-
-#branding-menu-lampedusa.showme{
+#branding-menu-lampedusa{
     background-image: url('/assets/img/work/branding/branding-menu/LBD-lampedusa.jpg');
-    background-size: cover;
-    background-position: center;
 }
-
-#branding-menu-frosty.showme{
+#branding-menu-frosty{
     background-image: url('/assets/img/work/branding/branding-menu/LBD-frosty.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
-#branding-menu-wilson.showme p,
-#branding-menu-am.showme p,
-#branding-menu-tdr.showme p,
-#branding-menu-lampedusa.showme p,
-#branding-menu-boozery.showme p,
-#branding-menu-frosty.showme p{
+#branding-menu-wilson.showme,
+#branding-menu-am.showme,
+#branding-menu-tdr.showme,
+#branding-menu-boozery.showme,
+#branding-menu-lampedusa.showme,
+#branding-menu-frosty.showme{
+    filter: grayscale(0%);
+    transition: ease 0.5s;
+}
+#branding-menu-am.showme{
+    filter:opacity(100%);
+    transition: ease 0.5s;
+}
+#branding-menu-wilson.open,
+#branding-menu-am.open,
+#branding-menu-tdr.open,
+#branding-menu-boozery.open,
+#branding-menu-lampedusa.open,
+#branding-menu-frosty.open{
+    background-image: none;
+}
+#branding-menu-wilson.open p,
+#branding-menu-am.open p,
+#branding-menu-tdr.open p,
+#branding-menu-lampedusa.open p,
+#branding-menu-boozery.open p,
+#branding-menu-frosty.open p{
+    display: block;
+    color: black;
+}
+#branding-menu-wilson p,
+#branding-menu-am p,
+#branding-menu-tdr p,
+#branding-menu-lampedusa p,
+#branding-menu-boozery p,
+#branding-menu-frosty p{
     display: none;
 }
-
-
 #branding-wilson,
 #branding-menu-back,
 #branding-am,
@@ -117,6 +146,27 @@
 #branding-boozery,
 #branding-tdr{
     display: none;
+}
+#branding-menu-back{
+    transition: ease 0.5s;
+}
+
+#branding-menu-wilson:hover > #hover-cursor-wilson,
+#branding-menu-am:hover > #hover-cursor-am,
+#branding-menu-tdr:hover > #hover-cursor-lampedusa,
+#branding-menu-boozery:hover > #hover-cursor-boozery,
+#branding-menu-lampedusa:hover > #hover-cursor-tdr,
+#branding-menu-frosty:hover > #hover-cursor-frosty{
+    display: block;
+}
+#hover-cursor-wilson,
+#hover-cursor-am,
+#hover-cursor-lampedusa,
+#hover-cursor-boozery,
+#hover-cursor-tdr,
+#hover-cursor-frosty{
+    display: none;
+    position: absolute;
 }
 
 #branding-wilson.showme,

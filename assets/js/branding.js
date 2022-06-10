@@ -25,6 +25,39 @@ $(document).ready(function () {
         }
     });
 
+    // let brandingCont = $('#branding-menu-cont');
+    // function replaceCursor(event) {
+    //     let hoveredEl = this.id.split('-', 3)[2]
+    //     let hoverCursorEl = $(`#hover-cursor-${hoveredEl}`);
+    //     hoverCursorEl.css({
+    //         'top': `${event.clientY - 45 + "px"}`,
+    //         'left': `${event.clientX - 10 + "px"}`,
+    //     })
+    // }
+
+    $('.branding-menu-item').each(function () {
+        $(this).mousemove(function (event) {
+            console.log(event.clientY)
+            let hoveredEl = this.id.split('-', 3)[2]
+            let hoverCursorEl = $(`#hover-cursor-${hoveredEl}`);
+            hoverCursorEl.css({
+                'top': `${event.clientY - 45 + "px"}`,
+                'left': `${event.clientX - 10 + "px"}`,
+            })
+        });
+    })
+
+
+    // projectCont.mousemove(function (event) {
+    //     let hoveredEl = this.id.split('-', 3)[2]
+    //     let hoverCursorEl = $(`#hover-cursor-${hoveredEl}`);
+    //     hoverCursorEl.css({
+    //         'top': `${event.clientY - 45 + "px"}`,
+    //         'left': `${event.clientX - 10 + "px"}`,
+    //     });
+    //     console.log(hoverCursorEl);
+    // });
+
     function initSwiper() {
         $(".swiper-container").each(function (index) {
             $(this).addClass("instance-" + index);
@@ -67,6 +100,7 @@ $(document).ready(function () {
         // show selected project
         $(`#branding-${clickedId}`).addClass('showme');
         $(`#branding-menu-${clickedId}`).removeClass('showme');
+        $(`#branding-menu-${clickedId}`).addClass('open');
 
         // if button clicked was back reload page
         if (clickedId === 'back') {
