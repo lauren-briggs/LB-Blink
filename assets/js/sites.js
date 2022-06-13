@@ -52,4 +52,25 @@ $(document).ready(function () {
         }
     })
 
+    // display sites on screen hover
+    function displaySitesOnHover() {
+        initialText.css({
+            'display': 'none',
+        })
+        let projectNameArr = ['am', 'hg', 'drake', 'quiz', 'weather'];
+        let bgImage = projectNameArr[Math.floor(Math.random() * projectNameArr.length)];
+        console.log(bgImage);
+
+        displayEl.css({
+            "background-image": `url(/assets/img/work/sites/LBD-Websites-${bgImage}.jpg)`,
+            "background-size": "cover",
+            "background-position": "center",
+        });
+    }
+
+    $('.hover-grid-item').mouseover(displaySitesOnHover);
+
+    // displaySitesOnHover();
+
+
 });
