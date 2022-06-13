@@ -60,7 +60,6 @@
     align-items: center;
     justify-content: center;
     background-image: none;
-    cursor: pointer;
 }
 
 #branding-menu-wilson,
@@ -80,7 +79,6 @@
     filter: opacity(95%);
     transition: ease 0.5s;
 }
-
 #branding-menu-wilson{
     background-image: url('/assets/img/work/branding/branding-menu/LBD-Wilson.jpg');
 }
@@ -120,6 +118,7 @@
 #branding-menu-lampedusa.open,
 #branding-menu-frosty.open{
     background-image: none;
+    cursor: default;
 }
 #branding-menu-wilson.open p,
 #branding-menu-am.open p,
@@ -153,9 +152,9 @@
 
 #branding-menu-wilson:hover > #hover-cursor-wilson,
 #branding-menu-am:hover > #hover-cursor-am,
-#branding-menu-tdr:hover > #hover-cursor-lampedusa,
+#branding-menu-lampedusa:hover > #hover-cursor-lampedusa,
 #branding-menu-boozery:hover > #hover-cursor-boozery,
-#branding-menu-lampedusa:hover > #hover-cursor-tdr,
+#branding-menu-tdr:hover > #hover-cursor-tdr,
 #branding-menu-frosty:hover > #hover-cursor-frosty{
     display: block;
 }
@@ -167,6 +166,8 @@
 #hover-cursor-frosty{
     display: none;
     position: absolute;
+    width: 50px;
+    height: 30px;
 }
 
 #branding-wilson.showme,
@@ -180,6 +181,8 @@
     grid-column-end: span 2;
     grid-row-start: 1;
     grid-row-end: span 2;
+    /* height: calc(100vh - 60px); */
+    /* padding-bottom: 59px; */
 }
 
 #branding-menu-back.showme{
@@ -211,12 +214,19 @@
     justify-content: center;
     margin-left: calc((100vw / 3) / 2) !important;
     align-items: center;
+    border-top: solid 1px black;
 }
 
 @media all and (max-width: 1000px){
     #branding-menu-cont {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+    }
+    .swiper-pagination{
+        width: calc(100vw / 2) !important;
+        /* left: 0% !important; */
+        transform: translateX(0%) !important;
+        margin-left: 0px !important;
     }
 }
 
@@ -242,12 +252,21 @@
         height: 60px !important;
         /* bottom: 0px !important; */
         border-top: solid 1px black;
-        /* left: 0px !important; */
+        left: 0px !important;
         /* transform: translateX(0%) !important; */
         /* border-top: none; */
     }
     .swiper-wrapper{
         height: calc(100% - 60px) !important;
+    }
+    #branding-wilson.showme,
+    #branding-am.showme,
+    #branding-frosty.showme,
+    #branding-lampedusa.showme,
+    #branding-boozery.showme,
+    #branding-tdr.showme{
+        height: 100%;
+        /* padding-bottom: auto; */
     }
 }
 

@@ -25,38 +25,49 @@ $(document).ready(function () {
         }
     });
 
-    // let brandingCont = $('#branding-menu-cont');
-    // function replaceCursor(event) {
-    //     let hoveredEl = this.id.split('-', 3)[2]
-    //     let hoverCursorEl = $(`#hover-cursor-${hoveredEl}`);
-    //     hoverCursorEl.css({
-    //         'top': `${event.clientY - 45 + "px"}`,
-    //         'left': `${event.clientX - 10 + "px"}`,
-    //     })
-    // }
+    // replace cursor with project name on menu hover
+    $('#branding-menu-wilson').mousemove(replaceCursor);
+    $('#branding-menu-am').mousemove(replaceCursor);
+    $('#branding-menu-lampedusa').mousemove(replaceCursor);
+    $('#branding-menu-boozery').mousemove(replaceCursor);
+    $('#branding-menu-tdr').mousemove(replaceCursor);
+    $('#branding-menu-frosty').mousemove(replaceCursor);
 
-    $('.branding-menu-item').each(function () {
-        $(this).mousemove(function (event) {
-            console.log(event.clientY)
-            let hoveredEl = this.id.split('-', 3)[2]
-            let hoverCursorEl = $(`#hover-cursor-${hoveredEl}`);
-            hoverCursorEl.css({
-                'top': `${event.clientY - 45 + "px"}`,
-                'left': `${event.clientX - 10 + "px"}`,
-            })
-        });
-    })
-
-
-    // projectCont.mousemove(function (event) {
-    //     let hoveredEl = this.id.split('-', 3)[2]
-    //     let hoverCursorEl = $(`#hover-cursor-${hoveredEl}`);
-    //     hoverCursorEl.css({
-    //         'top': `${event.clientY - 45 + "px"}`,
-    //         'left': `${event.clientX - 10 + "px"}`,
-    //     });
-    //     console.log(hoverCursorEl);
-    // });
+    function replaceCursor(event) {
+        let thisId = this.id.split('-', 3)[2];
+        let hoveredEl
+        let hoverCursorEl
+        if (thisId === 'back') {
+            console.log('back');
+        } else {
+            let checkProjectIsOpen = $(`#branding-menu-${thisId}`).hasClass('open');
+            // console.log(checkProjectIsOpen)
+            if (checkProjectIsOpen === true) {
+                // console.log('Project is open');
+                hoveredEl = this.id.split('-', 3)[2]
+                hoverCursorEl = $(`#hover-cursor-${hoveredEl}`);
+                hoverCursorEl.css({
+                    'display': 'none',
+                });
+            } else if (checkProjectIsOpen === false) {
+                // console.log('Project closed');
+                // console.log(`x = ${event.clientX}`);
+                // console.log(`y = ${event.clientY}`);
+                // console.log([event]);
+                // console.log([event][0].currentTarget.offsetLeft);
+                // console.log([event][0].currentTarget.offsetTop);
+                let resetLeft = [event][0].currentTarget.offsetLeft;
+                let resetTop = [event][0].currentTarget.offsetTop;
+                hoveredEl = this.id.split('-', 3)[2]
+                // console.log(hoveredEl);
+                hoverCursorEl = $(`#hover-cursor-${hoveredEl}`);
+                hoverCursorEl.css({
+                    'top': `${event.clientY - resetTop - 60 + "px"}`,
+                    'left': `${event.clientX - resetLeft + "px"}`,
+                });
+            }
+        }
+    }
 
     function initSwiper() {
         $(".swiper-container").each(function (index) {
@@ -86,7 +97,7 @@ $(document).ready(function () {
                 },
                 preloadImages: false,
                 lazy: true,
-                speed: 2500,
+                speed: 2000,
             });
         });
     }
@@ -120,8 +131,8 @@ $(document).ready(function () {
                     console.log('skip project and menu');
                 } else {
                     // if the id doesn't match, hide div
-                    console.log('not a match');
-                    console.log(this.id);
+                    // console.log('not a match');
+                    // console.log(this.id);
                     $(`#${this.id}`).css({
                         'display': 'none',
                     });
