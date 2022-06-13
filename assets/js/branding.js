@@ -93,7 +93,7 @@ $(document).ready(function () {
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: 'true',
-                    dynamicBullets: true,
+                    dynamicBullets: false,
                 },
                 preloadImages: false,
                 lazy: true,
