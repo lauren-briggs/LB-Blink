@@ -224,3 +224,52 @@ h2{
     font-family: Magnet-Light-Italic, sans-serif;
     /* text-decoration: underline; */
 }
+
+.img-preview{
+    display: block;
+    position: fixed;
+    opacity: 0;
+    transition: ease 0.75s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-preview.showme{
+    display: block;
+    opacity: 1;
+    transition: ease 0.75s;
+    box-shadow: 2px 2px 5px 1px rgb(170, 170, 170);
+}
+
+#img-preview-code,
+#img-preview-hg,
+#img-preview-weather{
+    display: none;
+    opacity: 0;
+    transition: ease 0.75s;
+}
+
+#img-preview-code.showme{
+    bottom: 200px;
+    left: 200px;
+    display: block;
+    opacity: 1;
+    transition: ease 0.75s;
+}
+
+#img-preview-hg.showme{
+    bottom: 100px;
+    left: 100px;
+    display: block;
+    opacity: 1;
+    transition: ease 0.75s;
+}
+
+#img-preview-weather.showme{
+    bottom: 300px;
+    left: 300px;
+    display: block;
+    opacity: 1;
+    transition: ease 0.75s;
+}
