@@ -12,8 +12,8 @@ $(document).ready(function () {
             "background-color": "black",
             "color": "white",
         });
-        this.name = "radio-button-on-sharp";
-        iconWhiteBtn[0].name = "radio-button-off-sharp";
+        this.name = "radio-button-off-sharp";
+        iconWhiteBtn[0].name = "radio-button-on-sharp";
     })
 
     iconWhiteBtn.click(function () {
