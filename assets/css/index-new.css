@@ -219,3 +219,8 @@ h2{
     font-family: Magnet-Light-Italic, sans-serif;
     text-decoration: underline;
 }
+
+.des-menu-li.selected{
+    font-family: Magnet-Light-Italic, sans-serif;
+    /* text-decoration: underline; */
+}

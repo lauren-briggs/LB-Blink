@@ -51,17 +51,22 @@ $(document).ready(function () {
     desMenuLI.click(function () {
         // reset list its to 100% opacity
         projectList.children('li').children().css({ "opacity": "100%" });
-        desMenuLI.css({ "opacity": "100%" });
+        desMenuLI.css({
+            "opacity": "100%",
+        });
+        desMenuLI.removeClass('selected');
         // get name of clicked el
         // check which nav item was selected and reduce opacity of other items
         const selectedNavItem = this.id.split('-')[0];
+        $(this).addClass('selected')
         desMenuLI.each(function () {
             const checkClass = this.id.split('-')[0];
             if (checkClass === selectedNavItem) {
-                console.log(`Yes - ${this.id}`)
+                console.log(`Match: ${selectedNavItem} = ${this.id}`);
+
             } else {
                 const notChosen = $(`#${this.id}`);
-                console.log(`No - ${notChosen}`);
+                console.log(`Not a match: ${selectedNavItem} - ${notChosen[0].id}`);
                 notChosen.css({ "opacity": "25%" })
             }
         })
