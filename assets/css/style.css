@@ -14,8 +14,7 @@
 body{
     width: 100%;
     margin: 0% auto;
-    font-family: Magnet-Regular, sans-serif;
-    /* font-weight: lighter; */
+    font-family: Magnet-Light, sans-serif;
 }
 
 html {
@@ -23,7 +22,6 @@ html {
   }
 
 p{
-    font-weight: 400;
     font-style: normal;
 }
 
@@ -38,7 +36,6 @@ header a{
 }
 
 a{
-    font-weight: 400;
     font-style: normal;
     color: black;
     text-decoration: none;
@@ -296,205 +293,13 @@ a:visited{
     line-height: 125%;
   }
 
-
-#pdf-cont{
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    display: flex;
-    flex-direction: row;
-    z-index: 1;
-}
-
-#CV-cont{
-    text-align: center;
-    cursor: pointer;
-    z-index: 200;
-    padding: 20px 20px 0px 0px;
-}
-#cv-label{
-    font-size: 70%;
-    color:rgb(70, 70, 70);
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-#CV-cont:hover #cv-label{
-    text-decoration: underline;
-}
-
-
-#cover-cont{
-    padding: 20px 20px 0px 0px;
-    text-align: center;
-    cursor: pointer;
-    z-index: 200;
-}
-#cover-label{
-    font-size: 70%;
-    color:rgb(70, 70, 70);
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-#cover-cont:hover #cover-label{
-    text-decoration: underline;
-}
-
-#docs-cont{
-    position: fixed;
-    margin-top: 60px;
-    display: flex;
-    width: 100vw;
-    height: calc(100vh - 60px);
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-#docs-cont p{
-    font-size: 90%;
-    line-height: 120%;
-}
-
-#ref-ital{
-    font-family: Magnet-Light-Italic;
-    font-style: italic;
-    padding-top: 5px;
-}
-
-#cv-grid-cont{
-    width: 40vw;
-    min-width: 400px;
-    height: 80vh;
-    overflow: scroll;
-    border: solid 1px black;
-    background-color: white;
-    padding: 20px;
-    justify-content: start;
-    align-content: start;
-    gap: 5px;
-    line-height: 130%;
-    overflow: scroll;
-}
-
-#cv-close-cont{
-    display: none;
-}
-
-#cv-close-cont.showme{
-    display: flex;
-}
-
-#cv-grid-cont h1{
-    text-transform: uppercase;
-    font-weight: 400;
-}
-#cv-grid-cont h3{
-    text-transform: uppercase;
-    font-weight: 400;
-    padding: 5px 0px;
-    margin-top: 10px;
-    font-size: 90%;
-    border-top: solid 1px black;
-}
-
-#fine-line{
-    margin: 2px 0px 4px;
-    border-top: solid 0.5px black;
-}
-
-#cv-grid-cont p{
-    font-size: 90%;
-    line-height: 130%;
-    padding-bottom: 5px;
-}
-
-.cv-grid-row{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 15px;
-}
-
-#span-2{
-    grid-column-end: span 2;
-}
-
-#cover-letter-cont{
-    justify-content: center;
-    display: none;
-    /* padding-left: 300px; */
-}
-
-#cover-letter-cont.showme{
-    display: flex;
-}
-
-.close{
-    padding-right: 10px;
-    position: relative;
-    top: 8px;
-    left: calc(100% - 80px);
-    cursor: pointer;
-}
-
-.close-word{
-    visibility: hidden;
-}
-
-.close:hover .close-word{
-    visibility: visible;
-}
-
-#cover-letter{
-    width: 40vw;
-    min-width: 400px;
-    height: 80vh;
-    overflow: scroll;
-    border: solid 1px black;
-    padding: 20px;
-    background-color: white;
-}
-
-/* width */
-#cover-letter-cont ::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Handle */
-#cover-letter-cont ::-webkit-scrollbar-thumb {
-  background: black;
-  display: none;
-}
-
-/* Handle on hover */
-#cover-letter-cont:hover ::-webkit-scrollbar-thumb{
- display: block;
-}
-
-/* width */
-#cv-close-cont ::-webkit-scrollbar{
-  width: 5px;
-}
-
-/* Handle */
-#cv-close-cont ::-webkit-scrollbar-thumb{
-  background: black;
-  display: none;
-}
-
-/* Handle on hover */
-#cv-close-cont:hover ::-webkit-scrollbar-thumb{
- display: block;
-}
-
 #initial-text-index{
     position: fixed;
-    display: flex;
-    width: 100%;
+    top: 60px;
+    padding: 20px;
+    width: 70%;
     height: calc(100vh - 60px);
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }

@@ -206,16 +206,62 @@
     height: 100%;
 }
 
-.swiper-pagination{
+.swiper-nav{
     position: fixed !important;
     bottom: 0px !important;
     width: calc((100vw / 3) * 2) !important;
     height: 60px !important;
     display: flex;
-    justify-content: center;
-    margin-left: calc(100vw / 3) !important;
+    justify-content: flex-end;
     align-items: center;
     border-top: solid 1px black;
+    z-index: 99 !important;
+}
+
+.swiper-arrows-cont{
+    height: 60px !important;
+    width: 75px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 10px;
+    z-index: 99 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-prev::after{
+    content: "\2190" !important;
+    position: relative !important;
+    font-size: 120% !important;
+    margin-top: 0 !important;
+    color: black !important;
+    display: flex !important;
+    align-items: center !important; 
+    justify-content: flex-start !important;
+    height: 60px !important;
+    z-index: 99 !important;
+}
+
+.swiper-button-next,
+.swiper-button-next::after{
+    content: "\2192" !important;
+    position: relative !important;
+    font-size: 120% !important;
+    margin-top: 0 !important;
+    color: black !important;
+    display: flex !important;
+    align-items: center !important; 
+    justify-content: flex-end !important;
+    height: 60px !important;
+}
+
+.swiper-pagination{
+    bottom: 0px !important;
+    height: 60px !important;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    align-items: center;
 }
 
 @media all and (max-width: 1000px){
@@ -223,11 +269,9 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
     }
-    .swiper-pagination{
-        width: 50vw !important;
-        left: 50% !important;
-        transform: translateX(0%) !important;
-        margin-left: 0px !important;
+
+    .swiper-nav{
+        width: calc(100vw / 2) !important;
     }
 }
 
@@ -253,12 +297,9 @@
         align-items: center;
         margin-left: 0px !important;
         height: 60px !important;
-        /* bottom: 0px !important; */
         border-top: solid 1px black;
         border-right: none;
         left: 0px !important;
-        /* transform: translateX(0%) !important; */
-        /* border-top: none; */
     }
     .swiper-wrapper{
         height: calc(100% - 60px) !important;

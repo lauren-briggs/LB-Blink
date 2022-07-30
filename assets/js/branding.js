@@ -50,12 +50,6 @@ $(document).ready(function () {
                     'display': 'none',
                 });
             } else if (checkProjectIsOpen === false) {
-                // console.log('Project closed');
-                // console.log(`x = ${event.clientX}`);
-                // console.log(`y = ${event.clientY}`);
-                // console.log([event]);
-                // console.log([event][0].currentTarget.offsetLeft);
-                // console.log([event][0].currentTarget.offsetTop);
                 let resetLeft = [event][0].currentTarget.offsetLeft;
                 let resetTop = [event][0].currentTarget.offsetTop;
                 hoveredEl = this.id.split('-', 3)[2]
@@ -74,7 +68,7 @@ $(document).ready(function () {
             $(this).addClass("instance-" + index);
             let swiper = new Swiper(".instance-" + index, {
                 autoplay: {
-                    delay: 2000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 },
                 direction: 'horizontal',
@@ -95,12 +89,20 @@ $(document).ready(function () {
                     clickable: 'true',
                     dynamicBullets: false,
                 },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
                 preloadImages: false,
                 lazy: true,
-                speed: 2000,
+                speed: 1000,
             });
+
+            swiper.slideNext(1500, true)
+            swiper.slidePrev(1500, true)
         });
-    }
+    };
+
 
 
     const backBtn = $('#branding-menu-back');
@@ -108,6 +110,7 @@ $(document).ready(function () {
     projectCont.click(function () {
         // get id of clicked div
         let clickedId = this.id.split('-', 3)[2]
+        console.log(this);
         // show selected project
         $(`#branding-${clickedId}`).addClass('showme');
         $(`#branding-menu-${clickedId}`).removeClass('showme');
