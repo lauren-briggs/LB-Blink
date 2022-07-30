@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    const pauseBtn = $('#pause-container')
+    const pauseBtn = $('#icon-pause')
     const pauseIcon = $('#pause')
     const aboutMove = $('#about-move');
     const logo = $('#logo');
@@ -26,30 +26,22 @@ $(document).ready(function () {
     })
 
     pauseBtn.click(function () {
-        if (this.value == 'pause') {
+        if (this.name == 'pause-outline') {
             aboutMove.css({
                 animationPlayState: 'paused',
             });
-            circleText.css({
-                animationPlayState: 'paused',
-            });
             logo.attr('src', 'assets/img/LBD-10.jpg');
-            this.value = 'play';
-            pauseIcon.addClass('showme');
+            this.name = 'play-sharp';
             console.log(`animation paused`);
-            console.log(`button value: ${this.value}`);
+            console.log(`icon value: ${this.name}`);
         } else {
             aboutMove.css({
                 animationPlayState: '',
             });
-            circleText.css({
-                animationPlayState: '',
-            });
             logo.attr('src', 'assets/img/LBD-Gif-1A-02.gif');
-            pauseIcon.removeClass('showme');
-            this.value = 'pause';
+            this.name = 'pause-outline';
             console.log(`animation playing`);
-            console.log(`button value: ${this.value}`);
+            console.log(`icon-value: ${this.name}`);
         }
     });
 
