@@ -80,7 +80,6 @@ $(document).ready(function () {
                 const checkClass = this.id.split('-')[0];
                 if (checkClass === selectedNavItem) {
                     console.log(`Match: ${selectedNavItem} = ${this.id}`);
-
                 } else {
                     const notChosen = $(`#${this.id}`);
                     console.log(`Not a match: ${selectedNavItem} - ${notChosen[0].id}`);
@@ -105,8 +104,6 @@ $(document).ready(function () {
     // change bg img on hover of project name
     projectList.children('li').children().mouseenter(function () {
         const hoveredProjectId = this.id;
-        // let hoveredProjectClass = this.classList;
-        // console.log(hoveredProjectClass);
         console.log(hoveredProjectId);
         if (hoveredProjectId === "code" || hoveredProjectId === "hg" || hoveredProjectId === "weather") {
             console.log("yes");
