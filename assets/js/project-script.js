@@ -106,7 +106,7 @@ $(document).ready(function () {
             $(this).addClass("instance-" + index);
             let swiper = new Swiper(".instance-" + index, {
                 autoplay: {
-                    delay: 5000,
+                    delay: 2500,
                     disableOnInteraction: false,
                 },
                 direction: 'vertical',
@@ -140,6 +140,8 @@ $(document).ready(function () {
             swiper.slidePrev(1500, true)
         });
     };
+
+    // setTimeout(initSwiper, 3000)
 
     initSwiper();
 
