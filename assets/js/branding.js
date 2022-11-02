@@ -25,12 +25,50 @@ $(document).ready(function () {
         }
     });
 
+    // replace cursor with project name on menu hover
+    $('#branding-menu-wilson').mousemove(replaceCursor);
+    $('#branding-menu-am').mousemove(replaceCursor);
+    $('#branding-menu-lampedusa').mousemove(replaceCursor);
+    $('#branding-menu-boozery').mousemove(replaceCursor);
+    $('#branding-menu-tdr').mousemove(replaceCursor);
+    $('#branding-menu-frosty').mousemove(replaceCursor);
+
+    function replaceCursor(event) {
+        let thisId = this.id.split('-', 3)[2];
+        let hoveredEl
+        let hoverCursorEl
+        if (thisId === 'back') {
+            console.log('back');
+        } else {
+            let checkProjectIsOpen = $(`#branding-menu-${thisId}`).hasClass('open');
+            // console.log(checkProjectIsOpen)
+            if (checkProjectIsOpen === true) {
+                // console.log('Project is open');
+                hoveredEl = this.id.split('-', 3)[2]
+                hoverCursorEl = $(`#hover-cursor-${hoveredEl}`);
+                hoverCursorEl.css({
+                    'display': 'none',
+                });
+            } else if (checkProjectIsOpen === false) {
+                let resetLeft = [event][0].currentTarget.offsetLeft;
+                let resetTop = [event][0].currentTarget.offsetTop;
+                hoveredEl = this.id.split('-', 3)[2]
+                // console.log(hoveredEl);
+                hoverCursorEl = $(`#hover-cursor-${hoveredEl}`);
+                hoverCursorEl.css({
+                    'top': `${event.clientY - resetTop - 60 + "px"}`,
+                    'left': `${event.clientX - resetLeft + "px"}`,
+                });
+            }
+        }
+    }
+
     function initSwiper() {
         $(".swiper-container").each(function (index) {
             $(this).addClass("instance-" + index);
             let swiper = new Swiper(".instance-" + index, {
                 autoplay: {
-                    delay: 2000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 },
                 direction: 'horizontal',
@@ -49,14 +87,22 @@ $(document).ready(function () {
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: 'true',
-                    dynamicBullets: true,
+                    dynamicBullets: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
                 },
                 preloadImages: false,
                 lazy: true,
-                speed: 2500,
+                speed: 1000,
             });
+
+            swiper.slideNext(1500, true)
+            swiper.slidePrev(1500, true)
         });
-    }
+    };
+
 
 
     const backBtn = $('#branding-menu-back');
@@ -64,9 +110,11 @@ $(document).ready(function () {
     projectCont.click(function () {
         // get id of clicked div
         let clickedId = this.id.split('-', 3)[2]
+        console.log(this);
         // show selected project
         $(`#branding-${clickedId}`).addClass('showme');
         $(`#branding-menu-${clickedId}`).removeClass('showme');
+        $(`#branding-menu-${clickedId}`).addClass('open');
 
         // if button clicked was back reload page
         if (clickedId === 'back') {
@@ -86,8 +134,8 @@ $(document).ready(function () {
                     console.log('skip project and menu');
                 } else {
                     // if the id doesn't match, hide div
-                    console.log('not a match');
-                    console.log(this.id);
+                    // console.log('not a match');
+                    // console.log(this.id);
                     $(`#${this.id}`).css({
                         'display': 'none',
                     });

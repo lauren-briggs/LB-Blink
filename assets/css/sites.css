@@ -44,7 +44,8 @@
     flex-wrap: wrap;
     z-index: -1;
     width: 100vw;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 60px);
+    padding-top: 60px;
     text-decoration: none !important;
 }
 
@@ -73,12 +74,20 @@
     width: calc(2000px / 2.5);
     height: calc(1114px / 2.5);
     text-decoration: none !important;
-    transition: 1s;
+    transition: ease 0.5s;
     cursor: pointer;
 }
 
 #initial-text{
     padding: 10px;
+}
+
+#hover-grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
 }
 
 .search-bar-circle{

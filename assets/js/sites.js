@@ -18,7 +18,7 @@ $(document).ready(function () {
 
         console.log(clickedId);
         displayEl.css({
-            "background-image": `url(/lbd/assets/img/work/sites/LBD-Websites-${clickedId}.jpg)`,
+            "background-image": `url(/assets/img/work/sites/LBD-Websites-${clickedId}.jpg)`,
             "background-size": "cover",
             "background-position": "center",
         });
@@ -51,5 +51,26 @@ $(document).ready(function () {
             devRole.addClass('showme');
         }
     })
+
+    // display sites on screen hover
+    function displaySitesOnHover() {
+        initialText.css({
+            'display': 'none',
+        })
+        let projectNameArr = ['am', 'hg', 'drake', 'quiz', 'weather'];
+        let bgImage = projectNameArr[Math.floor(Math.random() * projectNameArr.length)];
+        console.log(bgImage);
+
+        displayEl.css({
+            "background-image": `url(/assets/img/work/sites/LBD-Websites-${bgImage}.jpg)`,
+            "background-size": "cover",
+            "background-position": "center",
+        });
+    }
+
+    $('.hover-grid-item').mouseover(displaySitesOnHover);
+
+    // displaySitesOnHover();
+
 
 });
