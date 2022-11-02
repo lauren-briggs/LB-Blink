@@ -41,7 +41,7 @@ $(document).ready(function () {
             aboutMove.css({
                 animationPlayState: 'paused',
             });
-            logo.attr('src', 'assets/img/LBD-10.jpg');
+            logo.attr('src', '/lbd/assets/img/LBD-10.jpg');
             this.name = 'play-sharp';
             console.log(`animation paused`);
             console.log(`icon value: ${this.name}`);
@@ -49,7 +49,7 @@ $(document).ready(function () {
             aboutMove.css({
                 animationPlayState: '',
             });
-            logo.attr('src', 'assets/img/LBD-Gif-1A-02.gif');
+            logo.attr('src', '/lbd/assets/img/LBD-Gif-1A-02.gif');
             this.name = 'pause-outline';
             console.log(`animation playing`);
             console.log(`icon-value: ${this.name}`);

@@ -37,7 +37,7 @@ $(document).ready(function () {
             aboutMove.css({
                 animationPlayState: 'paused',
             });
-            logo.attr('src', 'assets/img/LBD-10.jpg');
+            logo.attr('src', '/lbd/assets/img/LBD-10.jpg');
             this.name = 'play-sharp';
             console.log(`animation paused`);
             console.log(`icon value: ${this.name}`);
@@ -45,7 +45,7 @@ $(document).ready(function () {
             aboutMove.css({
                 animationPlayState: '',
             });
-            logo.attr('src', 'assets/img/LBD-Gif-1A-02.gif');
+            logo.attr('src', '/lbd/assets/img/LBD-Gif-1A-02.gif');
             this.name = 'pause-outline';
             console.log(`animation playing`);
             console.log(`icon-value: ${this.name}`);
@@ -110,7 +110,7 @@ $(document).ready(function () {
             $(`#img-preview-${hoveredProjectId}`).addClass('showme');
         } else {
             $('body').css({
-                "background-image": `url('/assets/img/work/bg-prev/LBD-${hoveredProjectId}.jpg')`,
+                "background-image": `url('/lbd/assets/img/work/bg-prev/LBD-${hoveredProjectId}.jpg')`,
                 "background-position": "center",
                 "background-repeat": "no-repeat",
                 "background-size": "cover",
