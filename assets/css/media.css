@@ -45,4 +45,7 @@
         position: fixed;
         top: 20px;
     }
+    #about-move{
+        width: 200vw;
+    }
 }
