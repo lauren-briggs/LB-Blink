@@ -109,11 +109,11 @@ $(document).ready(function () {
                     delay: 2500,
                     disableOnInteraction: false,
                 },
-                breakpoints: {
-                    1000: {
-                        direction: 'horizontal',
-                    }
-                },
+                // breakpoints: {
+                //     1000: {
+                //         direction: 'horizontal',
+                //     }
+                // },
                 direction: 'vertical',
                 effect: 'slide',
                 enabled: true,
