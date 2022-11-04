@@ -77,6 +77,7 @@ a:hover{
     align-items: center;
     padding-left: 10px;
     padding-top: 10px;
+    cursor: pointer;
 }
 
 #pause-container{
@@ -302,5 +303,13 @@ h2{
     }
     #about-move{
         width: 200vw;
+    }
+    .site-img-cont{
+        width: 100vw;
+        height: 60vh;
+    }
+    .site-img{
+        width: calc(2000px / 5);
+        height: calc(1114px / 5);
     }
 }
